@@ -1308,6 +1308,9 @@ svg {
         color: $text-color;
         background: $primary-light;
         border-color: $primary-light;
+        &.text-secondary{
+            color: $text-color !important;
+        }
     }
     .btn-link {
         color: $primary !important;

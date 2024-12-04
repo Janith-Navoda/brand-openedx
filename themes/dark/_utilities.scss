@@ -245,12 +245,15 @@ a.muted-link {
 }
 
 .btn-icon.btn-icon-primary:hover {
-    background-color: $primary-700 !important;
-    color: $primary-500 !important
+    background-color: $light-500 !important;
+    color: $primary-500;
 }
 
 .btn-tertiary{
     color: #a6a6a6;
+    &:hover{
+      color: $primary-light;
+    }
 }
 
 .nav-button-group {
