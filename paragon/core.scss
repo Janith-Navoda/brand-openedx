@@ -1,8 +1,8 @@
 // this file creates the core.css import here all the common styles for your theme. 
 
-// @use "./build/core/variables";
-// @use "./build/core/custom-media-breakpoints";
+@use "./build/core/variables";
+@use "./build/core/custom-media-breakpoints";
 
 @import "./variables";
 @import "./header";
-// @import "./overrides";
+@import "./overrides"; // Temporarily commented out to avoid dark theme issues

@@ -1,0 +1,19 @@
+{
+  "brand": {
+    "primary": {
+      "$value": "#15376D"
+    },
+    "primary-light": {
+      "$value": "#F2F7F8"
+    },
+    "text": {
+      "$value": "#111827"
+    },
+    "text-primary": {
+      "$value": "#515661"
+    },
+    "text-light": {
+      "$value": "#515661"
+    }
+  }
+}

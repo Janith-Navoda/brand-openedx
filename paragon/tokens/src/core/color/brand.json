@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "$type": "color",
+    "primary": {
+      "$value": "#15376D",
+      "$description": "Primary brand color"
+    },
+    "primary-light": {
+      "$value": "#F2F7F8",
+      "$description": "Light variant of primary color"
+    },
+    "text": {
+      "$value": "#111827",
+      "$description": "Main text color"
+    },
+    "text-primary": {
+      "$value": "#515661",
+      "$description": "Primary text color"
+    },
+    "text-light": {
+      "$value": "#515661",
+      "$description": "Light text color"
+    }
+  }
+}

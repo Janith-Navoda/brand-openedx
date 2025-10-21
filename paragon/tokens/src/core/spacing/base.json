@@ -1,0 +1,29 @@
+{
+  "spacing": {
+    "$type": "dimension",
+    "xs": {
+      "$value": "0.25rem",
+      "$description": "Extra small spacing"
+    },
+    "sm": {
+      "$value": "0.5rem",
+      "$description": "Small spacing"
+    },
+    "md": {
+      "$value": "1rem",
+      "$description": "Medium spacing"
+    },
+    "lg": {
+      "$value": "1.5rem",
+      "$description": "Large spacing"
+    },
+    "xl": {
+      "$value": "2rem",
+      "$description": "Extra large spacing"
+    },
+    "xxl": {
+      "$value": "3rem",
+      "$description": "Extra extra large spacing"
+    }
+  }
+}

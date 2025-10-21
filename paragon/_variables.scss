@@ -1,9 +1,10 @@
-$primary: #15376D;
-$primary-light: #F2F7F8;
+// Design token variables - these will be overridden by the build process
+$pgn-color-primary: #15376D;
+$pgn-color-primary-light: #F2F7F8;
 $light-dark: #374151;
-$text-color: #111827;
-$text-color-primary: #515661;
-$text-color-light: #515661;
+$pgn-color-text: #111827;
+$pgn-color-text-primary: #515661;
+$pgn-color-text-light: #515661;
 
 // for toggle theme button
 $page-color-transition: transparent .2s ease, color .2s ease;

@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "primary": {
+      "$value": "#AEC7F6"
+    },
+    "primary-light": {
+      "$value": "#292A2C"
+    },
+    "text": {
+      "$value": "#F8F8F8"
+    },
+    "text-primary": {
+      "$value": "#DDDFE2"
+    },
+    "text-light": {
+      "$value": "#DDDFE2"
+    },
+    "danger": {
+      "$value": "#FFA07A"
+    },
+    "success": {
+      "$value": "#54CF5E"
+    },
+    "background": {
+      "$value": "#0D0D0E"
+    },
+    "brand-accent": {
+      "$value": "#ce80aa"
+    },
+    "border": {
+      "$value": "#777792"
+    },
+    "overlay": {
+      "$value": "#36383B"
+    },
+    "button": {
+      "$value": "#112F6B"
+    },
+    "hover": {
+      "$value": "#383938"
+    }
+  }
+}

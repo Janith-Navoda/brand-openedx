@@ -1,10 +1,9 @@
 
-
-
-body.indigo-dark-theme{
-
+// Dark theme styles using design tokens
+body.indigo-dark-theme {
+    // Import the dark theme variables from build output
     @import "../themes/dark/variables";
-
+    
     @import "./header";
     @import "./footer";
     @import "./login";
@@ -18,10 +17,10 @@ body.indigo-dark-theme{
     @import "../themes/dark/utilities";
     @import "../themes/dark/extras";
 
-    color: $text-color !important;
-    background: $body-bg !important;
+    color: var(--pgn-color-text) !important;
+    background: var(--pgn-color-background) !important;
     * {
-        accent-color: $primary;
+        accent-color: var(--pgn-color-primary);
     }
 }
 

@@ -6,16 +6,28 @@
         "minified": "./core.min.css"
       }
     },
-    "defaults": {
-      "light": "light"
-    },
     "variants": {
+      "dark": {
+        "paths": {
+          "default": "./dark.css",
+          "minified": "./dark.min.css"
+        }
+      },
+      "git": {
+        "paths": {
+          "default": "./git.css",
+          "minified": "./git.min.css"
+        }
+      },
       "light": {
         "paths": {
           "default": "./light.css",
           "minified": "./light.min.css"
         }
       }
+    },
+    "defaults": {
+      "light": "light"
     }
   }
 }
