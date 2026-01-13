@@ -1,0 +1,20 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ * See <PARAGON_ROOT>/tokens/README.md for more details.
+ */
+
+:root {
+  --pgn-color-primary-base: #AEC7F6FF; /** Basic primary color, dark theme. */
+  --pgn-color-primary-light: #292A2CFF; /** Light primary color, dark theme. */
+  --pgn-color-primary-border: #777792FF; /** Primary border color, dark theme. */
+  --pgn-color-brand-base: #CE80AAFF; /** Basic brand color, dark theme. */
+  --pgn-color-text-base: #F8F8F8FF; /** Text base color, dark theme. */
+  --pgn-color-text-footer: #374151FF; /** Footer text color, dark theme. */
+  --pgn-color-text-primary: #DDDFE2FF; /** Text primary color, dark theme. */
+  --pgn-color-text-button: #112F6BFF; /** Button text color, dark theme. */
+  --pgn-color-bg-light-overlay: #36383BFF; /** Light background overlay color, dark theme. */
+  --pgn-color-bg-hover: #383938FF; /** Background hover color, dark theme. */
+  --pgn-color-body-bg: #0D0D0EFF; /** Light background overlay color, dark theme. */
+  --pgn-color-success-base: #54CF5EFF; /** Basic success color, dark theme. */
+  --pgn-color-danger-base: #FFA07AFF; /** Basic danger color, dark theme. */
+}
