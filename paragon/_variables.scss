@@ -1312,35 +1312,3 @@ $thumbnail-box-shadow:              none !default;
 // $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 
 // Force CSS variables for MFEs (add this at the bottom)
-// Your primary color
-$primary: #DC2626 !default;
-
-// Force override Paragon color map
-$pgn-colors: map-merge(
-  $pgn-colors,
-  (
-    primary: (
-      base: #DC2626,
-      50:  #fef2f2,
-      100: #fee2e2,
-      200: #fecaca,
-      300: #fca5a5,
-      400: #f87171,
-      500: #DC2626,
-      600: #dc2626,
-      700: #b91c1c,
-      800: #991b1b,
-      900: #7f1d1d,
-    ),
-  )
-) !global;
-
-// Directly force CSS variables (this is what MFEs really use)
-:root {
-  --pgn-color-primary-base: #DC2626 !important;
-  --primary: #DC2626 !important;
-  --brand-primary: #DC2626 !important;
-  --primary-500: #DC2626 !important;
-  --primary-300: #fca5a5 !important;
-  --primary-700: #b91c1c !important;
-}
