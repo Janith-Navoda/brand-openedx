@@ -1310,3 +1310,11 @@ $thumbnail-box-shadow:              none !default;
 
 // $print-page-size:                   a3 !default;
 // $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
+
+// Force CSS variables for MFEs (add this at the bottom)
+:root {
+  --pgn-color-primary-base: #DC2626 !important;
+  --primary: #DC2626 !important;
+  --brand-primary: #DC2626 !important;
+  --primary-500: #DC2626 !important;
+}
