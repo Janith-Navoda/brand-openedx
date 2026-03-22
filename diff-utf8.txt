@@ -1,0 +1,3000 @@
+﻿diff --git a/paragon/_account.scss b/paragon/_account.scss
+index ae7240a..075f59b 100644
+--- a/paragon/_account.scss
++++ b/paragon/_account.scss
+@@ -9,7 +9,7 @@
+         height: 32px;
+     }
+     h1 {
+-        color: $text-color;
++        color: var(--pgn-color-text-base);
+         font-size: 24px;
+         line-height: 30px;
+         font-weight: 700;
+@@ -18,7 +18,7 @@
+     .account-section {
+         font-size: 14px;
+         line-height: 20px;
+-        color: $text-color-primary;
++        color: var(--pgn-color-text-primary);
+         p {
+             margin: 0 0 15px;
+         }
+@@ -27,17 +27,17 @@
+             line-height: 24px;
+             font-weight: 700;
+             margin: 0 0 15px;
+-            color: $text-color;
++            color: var(--pgn-color-text-base);
+         }
+     }
+     .row {
+-        @include media-breakpoint-up(md) {
++        @media (--pgn-size-breakpoint-min-width-md) {
+             margin: 0;
+         }
+         .col-md-2 {
+             flex: 100%;
+             max-width: 100%;
+-            @include media-breakpoint-up(md) {
++            @media (--pgn-size-breakpoint-min-width-md) {
+                 flex: 240px;
+                 max-width: 240px;
+                 padding: 0 0 30px;
+@@ -46,7 +46,7 @@
+                 padding: 0;
+                 &.position-sticky {
+                     position: static !important;
+-                    @include media-breakpoint-up(md) {
++                    @media (--pgn-size-breakpoint-min-width-md) {
+                         position: sticky !important;
+                     }
+                 }
+@@ -57,8 +57,8 @@
+                         margin: 0 0 2px;
+                         &.font-weight-bold {
+                             a {
+-                                background: $primary-light;
+-                                color: $primary;
++                                background: var(--pgn-color-primary-light);
++                                color: var(--pgn-color-primary-base);
+                                 text-decoration: none;
+                             }
+                         }
+@@ -67,13 +67,13 @@
+                             font-size: 14px;
+                             font-weight: 500;
+                             line-height: 20px;
+-                            color: $primary;
++                            color: var(--pgn-color-primary-base);
+                             text-decoration: none;
+                             padding: 8px 12px;
+                             border-radius: 6px;
+                             &:hover {
+-                                background: $primary-light;
+-                                color: $primary;
++                                background: var(--pgn-color-primary-light);
++                                color: var(--pgn-color-primary-base);
+                                 text-decoration: none;
+                             }
+                         }
+@@ -84,12 +84,12 @@
+         .col-md-10 {
+             flex: 100%;
+             max-width: 100%;
+-            @include media-breakpoint-up(md) {
++            @media (--pgn-size-breakpoint-min-width-md) {
+                 flex: 500px;
+                 max-width: 500px;
+                 padding: 0 0 0 50px;
+             }
+-            @include media-breakpoint-up(lg) {
++            @media (--pgn-size-breakpoint-min-width-lg) {
+                 flex: 750px;
+                 max-width: 750px;
+             }
+@@ -102,7 +102,7 @@
+             font-size: 14px;
+         }
+         a.standalone-link {
+-            color: $primary;
++            color: var(--pgn-color-primary-base);
+         }
+         button.btn-outline-danger {
+             padding: 7px 13px !important;
+@@ -115,16 +115,16 @@
+     }
+     .pgn-transition-replace-group + .form-group {
+         border: 1px solid #E5E7EB;
+-        border-left: 8px solid $primary-light;
++        border-left: 8px solid var(--pgn-color-primary-light);
+         padding: 15px !important;
+         margin: 0 0 15px !important;
+         border-radius: 8px;
+         font-size: 14px;
+-        color: $text-color;
++        color: var(--pgn-color-text-base);
+         h6 {
+             font-weight: 600;
+             font-size: 18px;
+-            color: $text-color;
++            color: var(--pgn-color-text-base);
+             margin: 5px 0 0 !important;
+         }
+         p {
+@@ -133,7 +133,7 @@
+                 &.btn-link {
+                     font-weight: 600;
+                     font-size: 16px;
+-                    color: $primary;
++                    color: var(--pgn-color-primary-base);
+                 }
+             }
+         }
+@@ -141,33 +141,33 @@
+             margin: 10px 0 0 !important;
+             box-shadow: none;
+             padding: 15px !important;
+-            background: $primary-light !important;
++            background: var(--pgn-color-primary-light) !important;
+             a {
+-                color: $primary;
++                color: var(--pgn-color-primary-base);
+             }
+         }
+     }
+     .pgn-transition-replace-group {
+         border: 1px solid #E5E7EB;
+-        border-left: 8px solid $primary-light;
++        border-left: 8px solid var(--pgn-color-primary-light);
+         padding: 15px !important;
+         margin: 0 0 15px !important;
+         border-radius: 8px;
+         font-size: 14px;
+-        color: $text-color;
++        color: var(--pgn-color-text-base);
+         p.h6 {
+             font-weight: 600;
+             font-size: 16px;
+-            color: $text-color;
++            color: var(--pgn-color-text-base);
+             margin: 5px 0 0 !important;
+         }
+         p.small.text-muted, div.pgn__form-text.pgn__form-text-default  {
+-            background: $primary-light;
++            background: var(--pgn-color-primary-light);
+             padding: 10px 15px;
+             border-radius: 6px;
+             font-size: 14px;
+             line-height: 20px;
+-            color: $text-color !important;
++            color: var(--pgn-color-text-base) !important;
+             margin: 10px 0 0 !important;
+             &:empty {
+                 display: none;
+@@ -178,12 +178,12 @@
+             p.text-truncate, p[data-hj-suppress="true"] {
+                 font-weight: 600;
+                 font-size: 16px;
+-                color: $text-color-primary;
++                color: var(--pgn-color-text-primary);
+                 margin: 5px 0 0 !important;
+                 button {
+                     font-weight: 600;
+                     font-size: 16px;
+-                    color: $primary;
++                    color: var(--pgn-color-primary-base);
+                     margin: 0 !important;
+                 }
+             }
+@@ -193,12 +193,12 @@
+                     font-size: 18px;
+                     font-weight: 600;
+                     line-height: 24px;
+-                    color: $text-color;
++                    color: var(--pgn-color-text-base);
+                     margin: 0;
+                 }
+                 button {
+                     padding: 7px 13px !important;
+-                    border: 1px solid $primary !important;
++                    border: 1px solid var(--pgn-color-primary-base) !important;
+                     color: #fff;
+                     text-decoration: none;
+                     font-size: 14px;
+@@ -208,7 +208,7 @@
+                     position: absolute;
+                     right: 15px;
+                     top: 15px;
+-                    background: $primary;
++                    background: var(--pgn-color-primary-base);
+                     svg {
+                         display: none;
+                     }
+@@ -216,7 +216,7 @@
+                 p {
+                     .small.text-muted {
+                         font-size: 16px;
+-                        color: $text-color-primary !important;
++                        color: var(--pgn-color-text-primary) !important;
+                         line-height: 20px;
+                     }
+                 }
+@@ -230,7 +230,7 @@
+                 font-size: 18px;
+                 font-weight: 600;
+                 line-height: 24px;
+-                color: $text-color;
++                color: var(--pgn-color-text-base);
+                 margin: 0;
+             }
+             >p {
+@@ -240,14 +240,14 @@
+                 margin: 0;
+                 button {
+                     padding: 7px 13px !important;
+-                    border: 1px solid $primary !important;
++                    border: 1px solid var(--pgn-color-primary-base) !important;
+                     color: #fff;
+                     text-decoration: none;
+                     font-size: 14px;
+                     font-weight: 500;
+                     line-height: 20px;
+                     margin: 0 0 0 15px !important;
+-                    background: $primary;
++                    background: var(--pgn-color-primary-base);
+                     border-radius: 8px;
+                     &.btn-outline-primary {
+                         background: #fff !important;
+diff --git a/paragon/_dark.scss b/paragon/_dark.scss
+index ce86d20..3d5a93f 100644
+--- a/paragon/_dark.scss
++++ b/paragon/_dark.scss
+@@ -1,10 +1,4 @@
+-
+-
+-
+-body.indigo-dark-theme{
+-
+-    @import "../themes/dark/variables";
+-
++[data-paragon-theme-variant="dark"] {
+     @import "./header";
+     @import "./footer";
+     @import "./login";
+@@ -18,12 +12,9 @@ body.indigo-dark-theme{
+     @import "../themes/dark/utilities";
+     @import "../themes/dark/extras";
+ 
+-    color: $text-color !important;
+-    background: $body-bg !important;
++    color: var(--pgn-color-text-base) !important;
++    background: var(--pgn-color-body-bg) !important;
+     * {
+-        accent-color: $primary;
++        accent-color: var(--pgn-color-primary-base);
+     }
+ }
+-
+-    
+-
+diff --git a/paragon/_dates.scss b/paragon/_dates.scss
+index 3811e19..1231df4 100644
+--- a/paragon/_dates.scss
++++ b/paragon/_dates.scss
+@@ -20,14 +20,14 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 {
+                         border: 2px solid  #D1D5DB !important;
+                     }
+                     &.bg-warning-300 {
+-                        border: 2px solid  $primary !important;
++                        border: 2px solid  var(--pgn-color-primary-base) !important;
+                         background: white !important;
+                         &:after {
+                             position: absolute;
+                             left: 50%;
+                             top: 50%;
+                             content: "";
+-                            background: $primary;
++                            background: var(--pgn-color-primary-base);
+                             border-radius: 50%;
+                             width: 10px;
+                             height: 10px;
+@@ -50,7 +50,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 {
+                         font-weight: normal !important;
+                         font-size: 14px;
+                         line-height: 20px;
+-                        color: $text-color-primary;
++                        color: var(--pgn-color-text-primary);
+                     }
+                 }
+                 .badge.badge-primary {
+@@ -71,13 +71,13 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 {
+         &:first-child {
+             &.dates-day.pb-4 {
+                 .dates-line-bottom {
+-                    border-color: $primary !important;
++                    border-color: var(--pgn-color-primary-base) !important;
+                 }
+                 .dates-dot {
+                     &.border {
+                         &.border-gray-900 {
+-                            background: $primary !important;
+-                            border: 2px solid  $primary !important;
++                            background: var(--pgn-color-primary-base) !important;
++                            border: 2px solid  var(--pgn-color-primary-base) !important;
+                             &:before {
+                                 position: absolute;
+                                 top: 50%;
+@@ -92,7 +92,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 {
+                             }
+                         }
+                         &.bg-warning-300 {
+-                            border: 2px solid  $primary !important;
++                            border: 2px solid  var(--pgn-color-primary-base) !important;
+                             background: white !important;
+                             &:before {
+                                 display: none !important;
+@@ -107,8 +107,8 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 {
+                 .dates-dot {
+                     &.border {
+                         &.border-gray-900 {
+-                            background: $primary !important;
+-                            border: 2px solid  $primary !important;
++                            background: var(--pgn-color-primary-base) !important;
++                            border: 2px solid  var(--pgn-color-primary-base) !important;
+                             &:before {
+                                 position: absolute;
+                                 top: 50%;
+@@ -123,7 +123,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 {
+                             }
+                         }
+                         &.bg-warning-300 {
+-                            border: 2px solid  $primary !important;
++                            border: 2px solid  var(--pgn-color-primary-base) !important;
+                             background: white !important;
+                             &:before {
+                                 display: none !important;
+@@ -134,7 +134,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 {
+             }
+         }
+         .small.mb-2 {
+-            background: $primary-light;
++            background: var(--pgn-color-primary-light);
+             border-radius: 6px;
+             padding: 16px;
+             margin: 18px 0 0 0;
+diff --git a/paragon/_discussion.scss b/paragon/_discussion.scss
+index 1ae3d1c..878cc36 100644
+--- a/paragon/_discussion.scss
++++ b/paragon/_discussion.scss
+@@ -24,7 +24,7 @@ box-shadow: none;
+ position: static;
+ .navbar {
+     padding: 0 0 28px;
+-    @include media-breakpoint-down(sm) {
++    @media (--pgn-size-breakpoint-max-width-sm) {
+     display: block !important;
+     }
+     .nav-button-group {
+@@ -32,7 +32,7 @@ position: static;
+     border-radius: 6px;
+     padding: 0 !important;
+     overflow: hidden;
+-    @include media-breakpoint-down(sm) {
++    @media (--pgn-size-breakpoint-max-width-sm) {
+         margin: 0 0 10px;
+     }
+     .nav-item {
+@@ -49,14 +49,14 @@ position: static;
+         line-height: 20px;
+         font-weight: 500;
+         padding: 9px 17px;
+-        @include media-breakpoint-down(sm) {
++        @media (--pgn-size-breakpoint-max-width-sm) {
+             padding: 9px 12px;
+         }
+         &:hover {
+-            background: $primary-light !important;
++            background: var(--pgn-color-primary-light) !important;
+         }
+         &.active {
+-            background: $primary !important;
++            background: var(--pgn-color-primary-base) !important;
+         }
+         }
+ 
+@@ -71,16 +71,16 @@ position: static;
+     line-height: 22px;
+     font-weight: 500;
+     border-radius: 6px;
+-    background: $primary;
++    background: var(--pgn-color-primary-base);
+     margin: 0 0 0 12px;
+     white-space: nowrap;
+     }
+     .pgn__searchfield {
+     border: none;
+-    background: $primary-light;
++    background: var(--pgn-color-primary-light);
+     border-radius: 6px;
+     overflow: hidden;
+-    @include media-breakpoint-down(sm) {
++    @media (--pgn-size-breakpoint-max-width-sm) {
+         width: 100%;
+     }
+     &:after {
+@@ -92,7 +92,7 @@ position: static;
+         border: none;
+         border-radius: 6px;
+         .form-control {
+-            background: $primary-light !important;
++            background: var(--pgn-color-primary-light) !important;
+             padding-left: 0;
+             font-size: 14px;
+             &:focus{
+@@ -123,7 +123,7 @@ width: 100%;
+     max-width: 35% !important;
+     width: 100% !important;
+     min-width: 290px !important;
+-    @include media-breakpoint-down(sm) {
++    @media (--pgn-size-breakpoint-max-width-sm) {
+     max-width: 100% !important;
+     }
+     .pgn-transition-replace-group {
+@@ -150,11 +150,11 @@ width: 100%;
+ }
+ .d-flex.bg-light-400.flex-column {
+     max-width: 65%;
+-    @include media-breakpoint-down(sm) {
++    @media (--pgn-size-breakpoint-max-width-sm) {
+     max-width: 100%;
+     }
+     .post-form {
+-    @include media-breakpoint-down(sm) {
++    @media (--pgn-size-breakpoint-max-width-sm) {
+         margin: 0 !important;
+     }
+     .justify-content-end button {
+@@ -163,17 +163,17 @@ width: 100%;
+         font-weight: 500;
+     }
+     .font-style.d-flex.flex-row {
+-        @include media-breakpoint-down(sm) {
++        @media (--pgn-size-breakpoint-max-width-sm) {
+         display: block !important
+         }
+     }
+     .card {
+         width: 170px !important;
+-        @include media-breakpoint-down(sm) {
++        @media (--pgn-size-breakpoint-max-width-sm) {
+         width: 120px !important;
+         }
+         .pgn__card-section {
+-            @include media-breakpoint-down(sm) {
++            @media (--pgn-size-breakpoint-max-width-sm) {
+                 padding: 10px !important;
+             }
+         }
+@@ -209,8 +209,8 @@ width: 100%;
+ }
+ .masquerade-bar  {
+     .btn-brand {
+-        background: $primary;
+-        border-color: $primary;
++        background: var(--pgn-color-primary-base);
++        border-color: var(--pgn-color-primary-base);
+     }
+ }
+ div[data-learner-type=b2c_learner] div[role=heading].h2, div[role=heading].h2 {
+diff --git a/paragon/_extras.scss b/paragon/_extras.scss
+index b926494..feb3332 100644
+--- a/paragon/_extras.scss
++++ b/paragon/_extras.scss
+@@ -1,13 +1,13 @@
+ // theme toggle button
+ 
+-.theme-toggle-button{
++.theme-toggle-button {
+     position: relative;
+     display: flex;
+     align-items: center;
+ 
+     .light-theme-icon > span, .dark-theme-icon > span{
+         width: 18px;
+-        color: $primary;
++        color: var(--pgn-color-primary-base);
+     }
+ 
+     .toggle-switch {
+@@ -30,6 +30,21 @@
+                 opacity: 0;
+                 width: 0;
+                 height: 0;
++
++                &:checked {
++                  ~ .slider {
++                    &::before {
++                        transform: translateX(19px);
++                        background-color: var(--pgn-color-text-primary);
++                    }
++                  }
++                }
++                &:focus {
++                  ~ .slider {
++                    outline: 2px solid var(--pgn-color-primary-base);
++                    outline-offset: 1px;
++                  }
++                }
+             }
+ 
+             /* The slider */
+@@ -40,10 +55,10 @@
+                 left: 0;
+                 right: 0;
+                 bottom: 0;
+-                background-color: #AEC7F6;
++                background-color: var(--pgn-color-primary-base);
+                 transition: .4s;
+ 
+-                &::before{
++                &::before {
+                     position: absolute;
+                     content: "";
+                     height: 20px;
+@@ -54,7 +69,7 @@
+                     transition: .4s;
+                 }
+ 
+-                &.round{
++                &.round {
+                     border-radius: 34px;
+                     &::before{
+                         border-radius: 50%;
+diff --git a/paragon/_fonts.scss b/paragon/_fonts.scss
+index 4542cbd..829f737 100644
+--- a/paragon/_fonts.scss
++++ b/paragon/_fonts.scss
+@@ -1 +1,3 @@
+ // Add any font imports or definitions here
++
++@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+diff --git a/paragon/_footer.scss b/paragon/_footer.scss
+index 8b48cca..ad3eaf5 100644
+--- a/paragon/_footer.scss
++++ b/paragon/_footer.scss
+@@ -2,7 +2,7 @@
+ .wrapper-footer {
+     padding: 25px 0;
+     border-top: 1px solid #E5E7EB;
+-    @include media-breakpoint-up(md) {
++    @media (--pgn-size-breakpoint-min-width-md) {
+         padding: 45px 0;
+     }
+ }
+@@ -11,7 +11,7 @@ footer.tutor-container {
+     padding: 0 15px;
+     max-width: 1600px;
+     text-align: center;
+-    @include media-breakpoint-up(lg) {
++    @media (--pgn-size-breakpoint-min-width-lg) {
+         text-align: left;
+     }
+     .footer-top {
+@@ -23,10 +23,10 @@ footer.tutor-container {
+         }
+         .powered-area {
+             margin: 0 0 10px;
+-            @include media-breakpoint-up(md) {
++            @media (--pgn-size-breakpoint-min-width-md) {
+                 margin: 0 0 15px;
+             }
+-            @include media-breakpoint-up(lg) {
++            @media (--pgn-size-breakpoint-min-width-lg) {
+                 float: left;
+             }
+         }
+@@ -44,7 +44,7 @@ footer.tutor-container {
+             position: relative;
+             font-size: 12px;
+             line-height: 18px;
+-            color: $text-color-primary;
++            color: var(--pgn-color-text-primary);
+             &:first-child {
+                 padding-left: 0;
+             }
+@@ -58,7 +58,7 @@ footer.tutor-container {
+                     width: 1px;
+                     height: 29px;
+                     margin: -14px 0 0;
+-                    background: $text-color-primary;;
++                    background: var(--pgn-color-text-primary);;
+                 }
+             }
+         }
+@@ -74,16 +74,15 @@ footer.tutor-container {
+                 padding: 0 8px;
+                 font-size: 14px;
+                 line-height: 20px;
+-                @include media-breakpoint-up(md) {
++                @media (--pgn-size-breakpoint-min-width-md) {
+                     padding: 0 12px;
+                     font-size: 16px;
+                     line-height: 24px;
+                 }
+                 a {
+-                    color: $light-dark;
++                    color: var(--pgn-color-text-footer);
+                     text-decoration: none;
+                     &:hover {
+-                        color: #000;
+                         text-decoration: none;
+                     }
+                 }
+@@ -94,7 +93,7 @@ footer.tutor-container {
+         display: block;
+         font-size: 12px;
+         line-height: 16px;
+-        color: $light-dark;
++        color: var(--pgn-color-text-footer);
+     }
+ }
+ .pgn__pageBanner__accentA {
+@@ -108,7 +107,7 @@ footer.tutor-container {
+ #dashboard-container {
+     padding: 0 !important;
+     #dashboard-content {
+-        @include media-breakpoint-up(lg) {
++        @media (--pgn-size-breakpoint-min-width-lg) {
+           min-height: calc(100vh - 232px);
+         }
+     }
+@@ -121,7 +120,7 @@ footer.tutor-container {
+                 flex: 0 0 100%;
+                 max-width: 100%;
+                 padding: 0 15px;
+-                @include media-breakpoint-up(lg) {
++                @media (--pgn-size-breakpoint-min-width-lg) {
+                     flex: 0 0 70%;
+                     max-width: 70%;
+                 }
+@@ -131,14 +130,14 @@ footer.tutor-container {
+                         margin: 0 0 5px;
+                         font-size: 24px;
+                         line-height: 30px;
+-                        color: $text-color;
++                        color: var(--pgn-color-text-base);
+                     }
+                 }
+                 .course-card {
+                     margin: 0 0 16px !important;
+                     .pgn__card {
+                         border-radius: 8px;
+-                        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
++                        box-shadow: var(--pgn-course-card-shadow) !important;
+                         .flex-column {
+                             >div {
+                                 @media screen and (min-width: 590px) {
+@@ -184,7 +183,7 @@ footer.tutor-container {
+                                 min-width: 225px;
+                                 max-width: 225px;
+                             }
+-                            @include media-breakpoint-up(md) {
++                            @media (--pgn-size-breakpoint-min-width-md) {
+                                 min-width: 275px;
+                                 max-width: 275px;
+                             }
+@@ -204,7 +203,6 @@ footer.tutor-container {
+                                 h3 {
+                                     font-size: 16px;
+                                     font-weight: 600;
+-                                    color: #292C2E;
+                                     margin: 0;
+                                 }
+                             }
+@@ -237,7 +235,7 @@ footer.tutor-container {
+                             padding: 0 21px 18px;
+                             .small {
+                                 font-size: 12px;
+-                                color: $text-color-primary;
++                                color: var(--pgn-color-text-primary);
+                             }
+                         }
+                         .pgn__card-footer {
+@@ -278,12 +276,10 @@ footer.tutor-container {
+                 text-align: right;
+                 margin: 0 0 15px;
+                 .btn.btn-outline-primary {
+-                    border-color: #D1D5DB;
+                     padding: 3px 11px;
+                     font-size: 12px;
+                     line-height: 24px;
+                     font-weight: 500;
+-                    color: #374151;
+                     border-radius: 4px;
+                     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+                     span {
+@@ -320,12 +316,10 @@ footer.tutor-container {
+                         .filter-form-heading {
+                             font-size: 14px;
+                             font-weight: 500;
+-                            color: #191B23;
+                         }
+                         .pgn__form-label {
+                             font-size: 14px;
+                             line-height: 20px;
+-                            color: #191B23;
+                         }
+                         .pgn__form-checkbox-input:focus::before, .pgn__form-radio-input:focus::before { display: none !important; }
+                         input[type=radio], input[type=checkbox] {
+@@ -336,7 +330,7 @@ footer.tutor-container {
+                             width: 20px;
+                             border: 1px solid #C4C7CF;
+                             &:checked {
+-                                border-color: #15376D;
++                                border-color: #DC2626;
+                             }
+                         }
+                         input[type=checkbox] {
+@@ -349,7 +343,7 @@ footer.tutor-container {
+                 flex: 0 0 100%;
+                 max-width: 100%;
+                 padding: 0 15px;
+-                @include media-breakpoint-up(lg) {
++                @media (--pgn-size-breakpoint-min-width-lg) {
+                     flex: 0 0 30%;
+                     max-width: 30%;
+                     padding: 80px 15px 0;
+@@ -362,7 +356,7 @@ footer.tutor-container {
+                     #looking-for-challenge-widget {
+                         padding: 0 !important;
+                         box-shadow: none !important;
+-                        @include media-breakpoint-up(lg) {
++                        @media (--pgn-size-breakpoint-min-width-lg) {
+                             padding: 0 0 0 25px !important;
+                         }
+                         .pgn__card-wrapper-image-cap {
+@@ -372,17 +366,17 @@ footer.tutor-container {
+                             padding: 0 !important;
+                             h4 {
+                                 font-size: 16px;
+-                                color: $text-color;
++                                color: var(--pgn-color-text-base);
+                                 margin: 0 0 8px;
+                             }
+                             a {
+-                                color: $primary;
++                                color: var(--pgn-color-primary-base);
+                                 font-size: 12px;
+                                 line-height: 18px;
+                                 font-weight: 500;
+                                 svg {
+                                     width: 18px;
+-                                    fill: $primary;
++                                    fill: var(--pgn-color-primary-base);
+                                 }
+                             }
+                         }
+@@ -397,14 +391,14 @@ footer.tutor-container {
+     border: none;
+     padding: 30px 15px;
+     font-size: 14px;
+-    color: $text-color-primary;
++    color: var(--pgn-color-text-primary);
+     img {
+         width: 170px;
+         margin: 0 auto 50px;
+     }
+     h1 {
+         margin: 0 0 5px;
+-        color: $text-color;
++        color: var(--pgn-color-text-base);
+         font-size: 16px;
+         font-weight: 700;
+         line-height: 24px;
+@@ -413,8 +407,8 @@ footer.tutor-container {
+         margin: 0 0 27px;
+     }
+     a.btn-brand {
+-        background: $primary;
+-        border-color: $primary;
++        background: var(--pgn-color-primary-base);
++        border-color: var(--pgn-color-primary-base);
+         margin: 0;
+         font-size: 14px;
+         font-weight: 500;
+@@ -432,7 +426,7 @@ footer.tutor-container {
+ #course-list-active-filters {
+     margin-bottom: 10px;
+     .pgn__chip.pgn__chip-light {
+-        background: $primary;
++        background: var(--pgn-color-primary-base);
+         * {
+             color: white;
+             fill: white;
+@@ -441,4 +435,7 @@ footer.tutor-container {
+     .btn.btn-link {
+         font-size: 14px;
+     }
+-}
+\ No newline at end of file
++}
++footer.footer {
++    background: var(--pgn-color-body-bg);
++}
+diff --git a/paragon/_header.scss b/paragon/_header.scss
+index 929bf64..4293400 100644
+--- a/paragon/_header.scss
++++ b/paragon/_header.scss
+@@ -13,7 +13,7 @@
+             }
+         }
+         .menu {
+-            @include media-breakpoint-down(md) {
++            @media (--pgn-size-breakpoint-max-width-md) {
+                 position: static;
+             }
+             &.expanded {
+@@ -41,7 +41,7 @@
+                 box-shadow: none !important;
+                 outline: none !important;
+                 background: none !important;
+-                position: absolute;
++                color: var(--pgn-color-text-base);
+                 left: 15px;
+                 top: 18px;
+                 .hamburger-menu {
+@@ -50,7 +50,7 @@
+                     height: 12px;
+                     width: 20px;
+                     display: none;
+-                    @include media-breakpoint-down(md) {
++                    @media (--pgn-size-breakpoint-max-width-md) {
+                         display: block;
+                     }
+                     .line {
+@@ -82,7 +82,7 @@
+                 border-radius: 0;
+                 box-shadow: none;
+                 border: none !important;
+-                border-bottom: 2px solid $primary !important;
++                border-bottom: 2px solid var(--pgn-color-primary-base) !important;
+                 overflow: hidden;
+                 inset: unset !important;
+                 transform: none !important;
+@@ -95,21 +95,20 @@
+                     padding: 10px;
+                     font-size: 14px;
+                     line-height: 20px;
+-                    color: #374151;
+-                    @include media-breakpoint-down(md) {
++                    @media (--pgn-size-breakpoint-max-width-md) {
+                         padding: 16px;
+                     }
+                     &:hover {
+-                        background: $primary-light;
+-                        color: $text-color;                         ;
++                        background: var(--pgn-color-primary-light);
++                        color: var(--pgn-color-text-base);
+                     }
+                     &.h-desktop {
+                         display: none;
+-                        @include media-breakpoint-down(md) {
++                        @media (--pgn-size-breakpoint-max-width-md) {
+                             display: block;
+                         }
+                     }
+-                    @include media-breakpoint-down(md) {
++                    @media (--pgn-size-breakpoint-max-width-md) {
+                         &:after {
+                             content: '\00BB';
+                             padding: 0 0 0 5px;
+@@ -134,7 +133,7 @@
+             .nav-link.active,
+             .expanded .nav-link {
+             background: transparent;
+-            color: $primary;
++            color: var(--pgn-color-primary-base);
+             text-decoration: underline;
+             }
+         }
+@@ -142,7 +141,7 @@
+             position: static;
+             height: auto;
+             margin: 15px 0 15px 35px !important;
+-            @include media-breakpoint-up(lg) {
++            @media (--pgn-size-breakpoint-min-width-lg) {
+                 margin: 0 18px 0 0 !important;
+             }
+             img {
+@@ -155,15 +154,15 @@
+                 font-weight: 500;
+                 line-height: 22px;
+                 padding: 20px 0;
+-                color: #374151;
++                color: var(--pgn-color-primary-base);
+                 margin: 0 16px 0 0;
+                 display: block;
+                 border-bottom: 2px solid transparent;
+                 background: none;
+                 &:hover {
+-                    color: $text-color;
++                    color: var(--pgn-color-text-base);
+                     text-decoration: none;
+-                    border-bottom: 2px solid $primary;
++                    border-bottom: 2px solid var(--pgn-color-primary-base);
+                 }
+             }
+         }
+@@ -173,31 +172,17 @@
+                 padding: 9px 15px !important;
+                 box-shadow: none !important;
+                 outline: none !important;
+-                background: $primary-light !important;
+-                color: $primary;
++                background: var(--pgn-color-primary-light) !important;
++                color: var(--pgn-color-primary-base);
+                 font-size: 14px;
+                 font-weight: 500;
+                 line-height: 20px;
+                 &:before {
+                     display: none !important;
+                 }
+-                &:after {
+-                    display: inline-block;
+-                    vertical-align: middle;
+-                    content: "";
+-                    margin: 0 0 2px 8px;
+-                    border: 2px solid $primary;
+-                    border-width: 0 0 2px 2px;
+-                    transform: rotate(-45deg);
+-                    width: 7px;
+-                    height: 7px;
+-                }
+                 .avatar {
+                     display: none !important;
+                 }
+-                svg {
+-                    display: none !important;
+-                }
+             }
+             .menu-content {
+                 position: absolute;
+@@ -218,13 +203,12 @@
+                     padding: 10px;
+                     font-size: 14px;
+                     line-height: 20px;
+-                    color: #374151;
+-                    @include media-breakpoint-down(md) {
++                    @media (--pgn-size-breakpoint-max-width-md) {
+                         padding: 16px;
+                     }
+                     &:hover {
+-                        background: $primary-light;
+-                        color: $text-color;                         ;
++                        background: var(--pgn-color-primary-light);
++                        color: var(--pgn-color-text-base);
+                     }
+                 }
+             }
+@@ -237,7 +221,7 @@
+             position: static;
+             height: auto;
+             margin: 15px 0 15px 35px !important;
+-            @include media-breakpoint-up(lg) {
++            @media (--pgn-size-breakpoint-min-width-lg) {
+                 margin: 0 18px 0 0 !important;
+             }
+             img {
+@@ -248,7 +232,7 @@
+             display: flex;
+             .nav-course {
+                 display: none;
+-                @include media-breakpoint-up(lg) {
++                @media (--pgn-size-breakpoint-min-width-lg) {
+                     display: block;
+                 }
+                 a {
+@@ -261,30 +245,30 @@
+                     display: block;
+                     border-bottom: 2px solid transparent;
+                     &.active, &:hover {
+-                        color: $text-color;
++                        color: var(--pgn-color-text-base);
+                         text-decoration: none;
+-                        border-bottom: 2px solid $primary;
++                        border-bottom: 2px solid var(--pgn-color-primary-base);
+                     }
+                 }
+             }
+             .course-info-header {
+                 padding: 13px 25px 0 0;
+-                @include media-breakpoint-down(md) {
++                @media (--pgn-size-breakpoint-max-width-md) {
+                     padding: 4px 0 4px 15px;
+                 }
+                 .title {
+                     font-size: 14px;
+                     font-weight: 700;
+-                    color: $text-color;
++                    color: var(--pgn-color-text-base);
+                     white-space: normal;
+                     margin: 0 0 8px !important;
+-                    @include media-breakpoint-down(md) {
++                    @media (--pgn-size-breakpoint-max-width-md) {
+                         margin: 0 0 2px !important;
+                     }
+                 }
+                 .org {
+                     font-size: 12px;
+-                    color: $text-color-primary;
++                    color: var(--pgn-color-text-primary);
+                 }
+             }
+        }
+@@ -294,7 +278,7 @@
+         }
+     }
+     .user-dropdown {
+-        @include media-breakpoint-down(md) {
++        @media (--pgn-size-breakpoint-max-width-md) {
+             position: static;
+         }
+         &.show {
+@@ -321,13 +305,13 @@
+             padding: 9px 15px !important;
+             box-shadow: none !important;
+             outline: none !important;
+-            background: $primary-light !important;
+-            color: $primary;
++            background: var(--pgn-color-primary-light) !important;
++            color: var(--pgn-color-primary-base);
+             font-size: 14px;
+             font-weight: 500;
+             line-height: 20px;
+             height: auto !important;
+-            @include media-breakpoint-down(md) {
++            @media (--pgn-size-breakpoint-max-width-md) {
+                 padding: 0 !important;
+                 background: none !important;
+             }
+@@ -335,13 +319,13 @@
+                 display: none;
+             }
+             &:after {
+-                border-color: $primary !important;
++                border-color: var(--pgn-color-primary-base) !important;
+                 margin-left: 8px !important;
+-                @include media-breakpoint-down(md) {
++                @media (--pgn-size-breakpoint-max-width-md) {
+                     display: none;
+                 }
+             }
+-            @include media-breakpoint-down(md) {
++            @media (--pgn-size-breakpoint-max-width-md) {
+                 position: absolute;
+                 left: 15px;
+                 top: 18px;
+@@ -352,7 +336,7 @@
+                 height: 12px;
+                 width: 20px;
+                 display: none;
+-                @include media-breakpoint-down(md) {
++                @media (--pgn-size-breakpoint-max-width-md) {
+                     display: block;
+                 }
+                 .line {
+@@ -384,7 +368,7 @@
+                 font-weight: 500;
+                 line-height: 20px;
+                 display: inline-block !important;
+-                @include media-breakpoint-down(md) {
++                @media (--pgn-size-breakpoint-max-width-md) {
+                     display:none !important;
+                 }
+             }
+@@ -403,11 +387,11 @@
+             min-width: 12px;
+             padding: 0;
+             margin: 6px 0 0 !important;
+-            @include media-breakpoint-down(md) {
++            @media (--pgn-size-breakpoint-max-width-md) {
+                 width: 100%;
+                 margin: 26px 0 0 !important;
+                 border: none !important;
+-                border-bottom: 2px solid $primary !important;
++                border-bottom: 2px solid var(--pgn-color-primary-base) !important;
+                 box-shadow: none;
+                 border-radius: 0;
+             }
+@@ -418,20 +402,20 @@
+                 font-size: 14px;
+                 line-height: 20px;
+                 color: #374151;
+-                @include media-breakpoint-down(md) {
++                @media (--pgn-size-breakpoint-max-width-md) {
+                     padding: 16px;
+                 }
+                 &:hover {
+-                    background: $primary-light;
+-                    color: $text-color;                         ;
++                    background: var(--pgn-color-primary-light);
++                    color: var(--pgn-color-text-base);
+                 }
+                 &.h-desktop {
+                     display: none;
+-                    @include media-breakpoint-down(md) {
++                    @media (--pgn-size-breakpoint-max-width-md) {
+                         display: block;
+                     }
+                 }
+-                @include media-breakpoint-down(md) {
++                @media (--pgn-size-breakpoint-max-width-md) {
+                     &:after {
+                         content: '\00BB';
+                         padding: 0 0 0 5px;
+@@ -480,9 +464,9 @@
+             background: none !important;
+             border-radius: 0 !important;
+             &.course-link, &:hover {
+-                color: $text-color;
++                color: var(--pgn-color-text-base);
+                 text-decoration: none;
+-                border-bottom: 2px solid $primary !important;
++                border-bottom: 2px solid var(--pgn-color-primary-base) !important;
+             }
+         }
+         .btn-icon.btn-icon-inverse-primary {
+@@ -502,7 +486,7 @@
+ }
+ #root {
+     .nav-small-menu {
+-        border-bottom: 2px solid $primary !important;
++        border-bottom: 2px solid var(--pgn-color-primary-base) !important;
+         box-shadow: none !important;
+         width: 100%;
+         position: absolute;
+diff --git a/paragon/_learning.scss b/paragon/_learning.scss
+index d0604c5..9aac8c8 100644
+--- a/paragon/_learning.scss
++++ b/paragon/_learning.scss
+@@ -2,14 +2,14 @@
+     .pgn_collapsible {
+         border-radius: 8px;
+         border: 1px solid #E5E7EB;
+-        border-left: 8px solid $primary-light;
++        border-left: 8px solid var(--pgn-color-primary-light);
+     }
+     .collapsible-trigger {
+         padding: 8px 20px;
+         border: none !important;
+         font-size: 18px;
+         line-height: 24px;
+-        @include media-breakpoint-up(md) {
++        @media (--pgn-size-breakpoint-min-width-md) {
+             font-size: 18px;
+             line-height: 30px;
+             padding: 14px 24px;
+@@ -17,13 +17,13 @@
+         .fa-check-circle {
+             width: 20px;
+             height: 20px;
+-            @include media-breakpoint-up(md) {
++            @media (--pgn-size-breakpoint-min-width-md) {
+                 width: 24px;
+                 height: 24px;
+             }
+         }
+         .text-success {
+-            color: $primary !important;
++            color: var(--pgn-color-primary-base) !important;
+         }
+         .align-middle.col-6 {
+             padding-left: 0;
+@@ -42,24 +42,24 @@
+     .collapsible-body {
+         padding: 0 0 0 56px;
+         border: none;
+-        @include media-breakpoint-up(md) {
++        @media (--pgn-size-breakpoint-min-width-md) {
+             padding: 0 0 0 91px;
+         }
+         .text-success {
+-            color: $primary !important;
++            color: var(--pgn-color-primary-base) !important;
+         }
+         ol {
+             padding: 0 0 15px;
+             li {
+                 div {
+-                    @include media-breakpoint-down(md) {
++                    @media (--pgn-size-breakpoint-max-width-md) {
+                         line-height: 18px;
+                     }
+                 }
+                 a {
+-                    color: $text-color;
++                    color: var(--pgn-color-text-base);
+                     font-size: 15px;
+-                    @include media-breakpoint-up(md) {
++                    @media (--pgn-size-breakpoint-min-width-md) {
+                         font-size: 18px;
+                     }
+                 }
+@@ -70,12 +70,12 @@
+ }
+ #root {
+     .bg-light-400 {
+-        background: $primary-light !important;
++        background: var(--pgn-color-primary-light) !important;
+     }
+     .alert.alert-success {
+         box-shadow: none;
+         a {
+-            background: #15376D;
++            background: #DC2626;
+             padding: 9px 17px;
+             font-size: 16px;
+             line-height: 24px;
+@@ -91,7 +91,7 @@
+     }
+     .course-outline-tab {
+         .raised-card {
+-            background: $primary-light;
++            background: var(--pgn-color-primary-light);
+             box-shadow: none !important;
+             &.alert-content {
+                 background: none;
+@@ -106,24 +106,24 @@
+                 }
+             }
+             .pgn__card-header-actions {
+-                @include media-breakpoint-down(md) {
++                @media (--pgn-size-breakpoint-max-width-md) {
+                     margin-left: 0;
+                 }
+                 a {
+-                    background: $primary;
++                    background: var(--pgn-color-primary-base);
+                     padding: 9px 17px;
+                     font-size: 16px;
+                     line-height: 24px;
+                     border-radius: 6px;
+                     border: none;
+-                    @include media-breakpoint-down(md) {
++                    @media (--pgn-size-breakpoint-max-width-md) {
+                         width: 100%;
+                     }
+                 }
+             }
+             .pgn__card-header {
+                 display: block;
+-                @include media-breakpoint-up(md) {
++                @media (--pgn-size-breakpoint-min-width-md) {
+                     display: flex;
+                 }
+             }
+@@ -133,7 +133,7 @@
+             .pgn__card-header-title-md {
+                 font-size: 18px;
+                 line-height: 22px;
+-                color: $text-color;
++                color: var(--pgn-color-text-base);
+             }
+         }
+         .col-12.col-md-auto.p-0 {
+@@ -145,20 +145,20 @@
+ }
+ #root .course-outline-tab .col-12.col-md-auto.p-0 .btn {
+     background: none !important;
+-    color: $primary !important;
++    color: var(--pgn-color-primary-base) !important;
+ }
+ .course-tabs-navigation {
+     padding-top: 20px;
+     border: none;
+     .nav.nav-underline-tabs {
+-        border-bottom: 1px solid $primary-light;
++        border-bottom: 1px solid var(--pgn-color-primary-light);
+         a, button {
+             border-width: 2px;
+             font-size: 14px;
+             font-weight: 500;
+             margin: 0 10px 0 0;
+             background: none !important;
+-            @include media-breakpoint-up(md) {
++            @media (--pgn-size-breakpoint-min-width-md) {
+                 margin: 0 32px 0 0;
+             }
+         }
+@@ -169,9 +169,9 @@ div[data-learner-type=b2c_learner] {
+         font-size: 28px;
+         line-height: 32px;
+         margin: 0 0 20px;
+-        color: $text-color;
++        color: var(--pgn-color-text-base);
+         font-weight: 800;
+-        @include media-breakpoint-up(md) {
++        @media (--pgn-size-breakpoint-min-width-md) {
+             font-size: 36px;
+             line-height: 44px;
+         }
+@@ -179,16 +179,16 @@ div[data-learner-type=b2c_learner] {
+ }
+ .course-outline-tab {
+     padding-bottom: 30px;
+-    @include media-breakpoint-up(md) {
++    @media (--pgn-size-breakpoint-min-width-md) {
+         padding-bottom: 50px;
+     }
+     section.mb-4 {
+         border-radius: 8px;
+-        @include media-breakpoint-up(md) {
++        @media (--pgn-size-breakpoint-min-width-md) {
+             padding: 0 0 0 25px;
+         }
+         h2 {
+-            color: $text-color;
++            color: var(--pgn-color-text-base);
+             font-size: 20px;
+             line-height: 28px;
+             font-weight: 700;
+@@ -201,7 +201,7 @@ div[data-learner-type=b2c_learner] {
+                     font-size: 14px;
+                     line-height: 20px;
+                     font-weight: 500;
+-                    color: $primary;
++                    color: var(--pgn-color-primary-base);
+                     text-decoration: underline;
+                     &:hover {
+                         text-decoration: none;
+@@ -217,7 +217,7 @@ div[data-learner-type=b2c_learner] {
+ #courseHome-dates {
+     a {
+         &:hover {
+-            color: $primary;
++            color: var(--pgn-color-primary-base);
+         }
+     }
+     .small {
+diff --git a/paragon/_login.scss b/paragon/_login.scss
+index a4c0e60..617cf26 100644
+--- a/paragon/_login.scss
++++ b/paragon/_login.scss
+@@ -5,11 +5,11 @@
+     }
+     .layout {
+         min-height: 100vh;
+-        background: $primary-light;
++        background: var(--pgn-color-primary-light);
+         padding: 20px;
+         overflow: hidden;
+         position: relative;
+-        @include media-breakpoint-up(sm) {
++        @media (--pgn-size-breakpoint-min-width-sm) {
+             padding: 50px;
+         }
+         &:after, &:before {
+@@ -22,7 +22,7 @@
+             border-radius: 50%;
+             box-shadow: 400px -400px 143px 90px rgba(122, 185, 250, 0.45);
+             display: none;
+-            @include media-breakpoint-up(sm) {
++            @media (--pgn-size-breakpoint-min-width-sm) {
+                 display: block;
+             }
+         }
+@@ -57,13 +57,13 @@
+                 max-width: 564px !important;
+                 font-size: 32px;
+                 line-height: 40px;
+-                color: $primary !important;
++                color: var(--pgn-color-primary-base) !important;
+                 padding: 50px 0;
+                 position: relative;
+                 z-index: 1;
+                 width: 100%;
+                 font-weight: 400;
+-                @include media-breakpoint-up(sm) {
++                @media (--pgn-size-breakpoint-min-width-sm) {
+                     font-size: 52px;
+                     line-height: 78px;
+                 }
+@@ -71,13 +71,12 @@
+                     padding: 0;
+                 }
+                 .text-accent-a {
+-                    font-weight: 400;
+                     font-size: 34px;
+                     line-height: 40px;
+-                    color: $primary !important;
++                    color: var(--pgn-color-primary-base) !important;
+                     display: block !important;
+                     font-weight: 900;
+-                    @include media-breakpoint-up(sm) {
++                    @media (--pgn-size-breakpoint-min-width-sm) {
+                         font-size: 64px;
+                         line-height: 74px;
+                     }
+@@ -85,14 +84,14 @@
+             }
+         }
+         .content {
+-            background: #fff;
++            background: var(--pgn-color-body-bg);
+             border-radius: 20px 0px;
+             padding: 20px;
+             margin: 0;
+             position: relative;
+             z-index: 1;
+             display: block;
+-            @include media-breakpoint-up(sm) {
++            @media (--pgn-size-breakpoint-min-width-sm) {
+                 padding: 50px;
+                 border-radius: 50px 0px;
+             }
+@@ -111,14 +110,14 @@
+                     font-weight: 500;
+                     padding: 0 0 16px;
+                     margin: 0 32px -1px 0;
+-                    color: $text-color-primary;
++                    color: var(--pgn-color-text-primary);
+                     background: none !important;
+                     &:before {
+                         display: none;
+                     }
+                     &.active, &:hover {
+-                        color: $primary;
+-                        border-bottom: 2px solid $primary;
++                        color: var(--pgn-color-primary-base);
++                        border-bottom: 2px solid var(--pgn-color-primary-base);
+                     }
+                 }
+             }
+@@ -153,8 +152,8 @@
+                     font-size: 14px;
+                 }
+                 .btn-brand {
+-                    background-color: $primary;
+-                    border-color: $primary;
++                    background-color: var(--pgn-color-primary-base);
++                    border-color: var(--pgn-color-primary-base);
+                     font-size: 14px;
+                     font-weight: 500;
+                     line-height: 30px;
+diff --git a/paragon/_overrides.scss b/paragon/_overrides.scss
+index e6cc0e1..9fb12fb 100644
+--- a/paragon/_overrides.scss
++++ b/paragon/_overrides.scss
+@@ -13,12 +13,46 @@ html {
+ .container-xl {
+     max-width: 1600px !important;
+     padding-left: 15px !important;
+-    padding-right: 15 !important;
++    padding-right: 15px !important;
+ }
+ #root .btn:before {
+     border-color: transparent !important;
+ }
+ 
++a.course-card-title {
++  color: var(--pgn-color-text-primary) !important;
++}
++
++body {
++  background: var(--pgn-color-body-bg) !important;
++}
++// Course Authoring Outline Section
++.course-outline-section {
++
++  .pt-4 > .mx-0.row {
++    background: var(--pgn-color-body-bg) !important;
++    box-shadow: var(--pgn-course-card-shadow) !important;
++    border-left-color: var(--pgn-color-primary-base) !important;
++  }
++}
++
++.section-card__subsections {
++
++  > .mx-0.row {
++    background: var(--pgn-color-bg-hover) !important;
++    border-left-color: var(--pgn-color-primary-base) !important;
++  }
++}
++
++.subsection-card__units {
++
++  > .mx-0.row {
++    background: var(--pgn-color-body-bg) !important;
++    border-left-color: var(--pgn-color-primary-base) !important;
++  }
++}
++
++
+ // detail page
+ #root {
+     .x-small {
+@@ -29,7 +63,7 @@ html {
+         flex: 0 0 100% !important;
+         padding: 9px 13px !important;
+         margin: 20px  0 0 !important;
+-        background: $primary-light;
++        background: var(--pgn-color-primary-light);
+         border-radius: 6px 6px 0px 0px;
+         @media only screen and (max-width: 576px) {
+             margin: 0 !important;
+@@ -39,7 +73,7 @@ html {
+                 font-size: 14px;
+                 line-height: 20px;
+                 a {
+-                    color: $text-color-primary !important;
++                    color: var(--pgn-color-text-primary) !important;
+                     font-weight: 500;
+                 }
+                 button {
+@@ -47,7 +81,7 @@ html {
+                     background: none !important;
+                     padding: 0 !important;
+                     line-height: 20px;
+-                    color: $text-color-primary !important;
++                    color: var(--pgn-color-text-primary) !important;
+                     border: none !important;
+                     font-weight: 500;
+                 }
+@@ -60,85 +94,6 @@ html {
+             position: absolute;
+             right: 0;
+             top: -22px;
+-            .mt-3, .ml-1, >div {
+-                margin: 0 !important;
+-                border: none !important;
+-                &:first-child {
+-                    button {
+-                        span {
+-                            border: none;
+-                            transform: none;
+-                            width: 21px;
+-                            height: auto;
+-                            &:after, &:before {
+-                                display: none;
+-                            }
+-                        }
+-                        svg {
+-                            display: block;
+-                            width: 24px;
+-                            height: auto;
+-                            path {
+-                                fill: #9CA3AF;
+-                            }
+-                        }
+-                    }
+-                }
+-                button {
+-                    height: auto;
+-                    padding: 5px;
+-                    border: 1px solid #D1D5DB !important;
+-                    position: relative;
+-                    margin: 0 0 0 12px;
+-                    border-radius: 6px;
+-                    .icon-container {
+-                        width: 21px !important;
+-                        height: 21px !important;
+-                    }
+-                    span {
+-                        box-sizing: border-box;
+-                        position: relative;
+-                        display: block;
+-                        transform: scale(var(--ggs,1));
+-                        border: 2px solid #9CA3AF;
+-                        border-bottom: 0;
+-                        width: 14px;
+-                        height: 14px;
+-                        border-top-left-radius: 100px;
+-                        border-top-right-radius: 100px;
+-                        &:after, &:before {
+-                            content: "";
+-                            display: block;
+-                            box-sizing: border-box;
+-                            position: absolute;
+-                        }
+-                        &:after {
+-                            border-radius: 3px;
+-                            width: 16px;
+-                            height: 10px;
+-                            border: 6px solid transparent;
+-                            border-top: 1px solid transparent;
+-                            box-shadow: inset 0 0 0 4px #9CA3AF,  0 -2px 0 0 #9CA3AF;
+-                            top: 14px;
+-                            left: -3px;
+-                            border-bottom-left-radius: 100px;
+-                            border-bottom-right-radius: 100px;
+-                        }
+-                        &:before {
+-                            background: #9CA3AF;
+-                            width: 4px;
+-                            height: 4px;
+-                            top: -4px;
+-                            left: 3px;
+-                            border-top-left-radius: 100px;
+-                            border-top-right-radius: 100px;
+-                        }
+-                    }
+-                    svg {
+-                        display: none;
+-                    }
+-                }
+-            }
+         }
+          + .w-100.d-flex div.d-flex.ml-auto {
+             @media only screen and (max-width: 576px) {
+@@ -154,8 +109,17 @@ html {
+             .ml-1, >div {
+                 margin: 0 !important;
+                 border: none !important;
+-                
++
+                 button {
++                    padding: 5px;
++                    border: 1px solid #D1D5DB !important;
++                    position: relative;
++                    margin: 0 0 0 12px;
++                    border-radius: 6px;
++                    .icon-container {
++                        width: 21px !important;
++                        height: 21px !important;
++                    }
+                     span {
+                         border: none;
+                         transform: none;
+@@ -174,7 +138,7 @@ html {
+                         }
+                     }
+                 }
+-                
++
+                 button[aria-label="Show notification tray"] {
+                     padding: 5px;
+                     border: 1px solid #D1D5DB !important;
+@@ -189,7 +153,7 @@ html {
+                         box-sizing: border-box;
+                         position: relative;
+                         display: block;
+-                        transform: scale(0.7);
++                        transform: scale(0.95);
+                         border: 2px solid #9CA3AF;
+                         border-bottom: 0;
+                         width: 14px;
+@@ -224,6 +188,10 @@ html {
+                             border-top-right-radius: 100px;
+                         }
+                     }
++                    span.rounded-circle{
++                        width: 2px;
++                        height: 2px;
++                    }
+                     svg {
+                         display: none;
+                     }
+@@ -334,18 +302,18 @@ html {
+                     button {
+                         border-top: none;
+                         &.complete {
+-                            background: $primary-light;
+-                            color: $primary;
++                            background: var(--pgn-color-primary-light);
++                            color: var(--pgn-color-primary-base);
+                             &:after {
+-                                background: $primary-light !important;
++                                background: var(--pgn-color-primary-light) !important;
+                             }
+                             &.active {
+                                 &:after {
+-                                    background: $primary !important;
++                                    background: var(--pgn-color-primary-base) !important;
+                                 }
+                             }
+                             .text-success {
+-                                color: $primary !important;
++                                color: var(--pgn-color-primary-base) !important;
+                             }
+                         }
+                     }
+@@ -372,14 +340,14 @@ html {
+         padding: 24px !important;
+         h4 {
+             font-size: 18px;
+-            color: $text-color;
++            color: var(--pgn-color-text-base);
+             font-weight: 500;
+             line-height: 24px;
+             margin: 0 0 15px;
+         }
+         p{
+             font-size: 14px;
+-            color: $text-color-primary;
++            color: var(--pgn-color-text-primary);
+         }
+         .pgn__action-row {
+             flex-direction: row;
+@@ -403,7 +371,6 @@ html {
+             .pgn__form-radio {
+                 .pgn__form-label {
+                     font-size: 14px;
+-                    color: #191B23;
+                     line-height: 20px;
+                 }
+                 .pgn__form-radio-input {
+@@ -431,12 +398,10 @@ html {
+             .filter-form-heading {
+                 font-size: 14px;
+                 font-weight: 500;
+-                color: #191B23;
+             }
+             .pgn__form-label {
+                 font-size: 14px;
+                 line-height: 20px;
+-                color: #191B23;
+             }
+             .pgn__form-checkbox-input:focus::before, .pgn__form-radio-input:focus::before { display: none !important; }
+             input[type=radio], input[type=checkbox] {
+@@ -447,7 +412,7 @@ html {
+                 width: 20px;
+                 border: 1px solid #C4C7CF;
+                 &:checked {
+-                    border-color: #15376D;
++                    border-color: #DC2626;
+                 }
+             }
+             input[type=checkbox] {
+diff --git a/paragon/_profile.scss b/paragon/_profile.scss
+index 41d45a3..6bdf249 100644
+--- a/paragon/_profile.scss
++++ b/paragon/_profile.scss
+@@ -1,6 +1,6 @@
+ // profile page style
+ .profile-page {
+-    @include media-breakpoint-up(lg) {
++    @media (--pgn-size-breakpoint-min-width-lg) {
+         min-height: calc(100vh - 142px);
+     }
+     .form-control {
+@@ -20,7 +20,7 @@
+         }
+     }
+     .profile-page-bg-banner {
+-        background: $primary-light !important;
++        background: var(--pgn-color-primary-light) !important;
+         position: relative;
+         overflow: hidden;
+         &:before {
+@@ -53,7 +53,7 @@
+         padding: 0 15px;
+         .row {
+             display: block;
+-            @include media-breakpoint-up(md) {
++            @media (--pgn-size-breakpoint-min-width-md) {
+                 display: flex;
+             }
+             &.align-items-center {
+@@ -61,7 +61,7 @@
+                 .col-auto.col-md-4 {
+                     flex: 0 0 100px !important;
+                     max-width: 100px !important;
+-                    @include media-breakpoint-up(md) {
++                    @media (--pgn-size-breakpoint-min-width-md) {
+                         flex: 0 0 200px !important;
+                         max-width: 200px !important;
+                     }
+@@ -72,11 +72,11 @@
+                         font-size: 24px;
+                         line-height: 32px;
+                         font-weight: 700;
+-                        color: $text-color;
++                        color: var(--pgn-color-text-base);
+                         margin: 0 0 5px;
+                     }
+                     p {
+-                        color: $text-color-primary;
++                        color: var(--pgn-color-text-primary);
+                         margin: 0;
+                         font-size: 12px;
+                         line-height: 16px;
+@@ -90,12 +90,12 @@
+                 flex: 0 0 100% !important;
+                 max-width: 100% !important;
+                 padding: 0 15px!important;
+-                @include media-breakpoint-up(md) {
++                @media (--pgn-size-breakpoint-min-width-md) {
+                     padding: 50px 15px 30px 15px !important;
+                     flex: 0 0 50% !important;
+                     max-width: 50% !important;
+                 }
+-                @include media-breakpoint-up(lg) {
++                @media (--pgn-size-breakpoint-min-width-lg) {
+                     padding: 50px 50px 30px 15px !important;
+                 }
+                 .d-none.d-md-block {
+@@ -105,10 +105,10 @@
+             .pt-md-3.col-md-8.col-lg-7.offset-lg-1 {
+                 padding: 0 15px 30px 15px !important;
+                 margin: 0;
+-                @include media-breakpoint-up(md) {
++                @media (--pgn-size-breakpoint-min-width-md) {
+                     padding: 50px 15px 30px 15px !important;
+                 }
+-                @include media-breakpoint-up(lg) {
++                @media (--pgn-size-breakpoint-min-width-lg) {
+                     padding: 50px 15px 30px 50px !important;
+                 }
+                 .alert-content {
+@@ -116,18 +116,18 @@
+                     box-shadow: none;
+                     border-radius: 8px;
+                     padding: 15px;
+-                    background: $primary-light;
+-                    color: $text-color;
++                    background: var(--pgn-color-primary-light);
++                    color: var(--pgn-color-text-base);
+                     font-size: 14px;
+                     line-height: 20px;
+                     a {
+-                        color: $primary;
++                        color: var(--pgn-color-primary-base);
+                     }
+                     .alert-heading.h4 {
+                         margin: 0 0 10px;
+                         font-weight: 500;
+                         font-size: 14px;
+-                        color: $text-color;
++                        color: var(--pgn-color-text-base);
+                     }
+                     p {
+                         margin: 0 0 10px;
+@@ -139,12 +139,12 @@
+             }
+             .pgn-transition-replace-group {
+                 border: 1px solid #E5E7EB;
+-                border-left: 8px solid $primary-light;
++                border-left: 8px solid var(--pgn-color-primary-light);
+                 padding: 15px !important;
+                 margin: 0 0 15px !important;
+                 border-radius: 8px;
+                 font-size: 14px;
+-                color: $text-color;
++                color: var(--pgn-color-text-base);
+                 .col-sm-6.d-flex.align-items-stretch {
+                     display: block !important;
+                     max-width: 100%;
+@@ -157,20 +157,20 @@
+                     .certificate {
+                         border: none;
+                         padding: 0;
+-                        background: $primary-light;
++                        background: var(--pgn-color-primary-light);
+                         margin: 0 !important;
+                     }
+                     .card-body {
+                         padding: 15px;
+                         a.default-link {
+                             padding: 7px 13px !important;
+-                            border: 1px solid $primary !important;
+-                            color: $primary;
++                            border: 1px solid var(--pgn-color-primary-base) !important;
++                            color: var(--pgn-color-primary-base);
+                             text-decoration: none;
+                             font-size: 0;
+                             line-height: 0;
+                             margin: 0 !important;
+-                            background: $primary;
++                            background: var(--pgn-color-primary-base);
+                             position: absolute;
+                             top: 15px;
+                             right: 15px;
+@@ -192,13 +192,13 @@
+                         p.small {
+                             font-weight: 400;
+                             font-size: 14px;
+-                            color: $text-color;
++                            color: var(--pgn-color-text-base);
+                             margin: 0 !important;
+                         }
+                         h4.certificate-title, p.h6 {
+                             font-size: 16px;
+                             line-height: 20px;
+-                            color: $text-color !important;
++                            color: var(--pgn-color-text-base) !important;
+                             margin: 0;
+                             font-weight: 600;
+                         }
+@@ -210,31 +210,31 @@
+                 p.h5, p.lead, .card-title {
+                     font-weight: 600;
+                     font-size: 16px;
+-                    color: $text-color;
++                    color: var(--pgn-color-text-base);
+                     margin: 5px 0 0 !important;
+                 }
+                 .edit-section-header {
+                     font-size: 18px;
+                     font-weight: 600;
+                     line-height: 24px;
+-                    color: $text-color;
++                    color: var(--pgn-color-text-base);
+                     margin: 0;
+                     padding: 6px 66px 6px 0;
+                 }
+                 small.form-text {
+-                    background: $primary-light;
++                    background: var(--pgn-color-primary-light);
+                     padding: 10px 15px;
+                     border-radius: 6px;
+                     font-size: 14px;
+                     line-height: 20px;
+-                    color: $text-color !important;
++                    color: var(--pgn-color-text-base) !important;
+                     margin: 10px 0 0;
+                 }
+                 .editable-item-header {
+                     margin: 0 !important;
+                     button {
+                         padding: 7px 13px !important;
+-                        border: 1px solid $primary !important;
++                        border: 1px solid var(--pgn-color-primary-base) !important;
+                         color: #fff;
+                         text-decoration: none;
+                         font-size: 14px;
+@@ -244,7 +244,7 @@
+                         position: absolute;
+                         right: 15px;
+                         top: 15px;
+-                        background: $primary;
++                        background: var(--pgn-color-primary-base);
+                         svg {
+                             display: none;
+                         }
+@@ -252,7 +252,7 @@
+                     p {
+                         .small.text-muted {
+                             font-size: 16px;
+-                            color: $text-color-primary !important;
++                            color: var(--pgn-color-text-primary) !important;
+                             line-height: 20px;
+                         }
+                     }
+@@ -299,14 +299,14 @@
+                                 line-height: 20px;
+                                 border: none !important;
+                                 padding: 0 !important;
+-                                color: $primary !important;
++                                color: var(--pgn-color-primary-base) !important;
+                                 text-decoration: underline;
+                                 &:after {
+                                     display: none;
+                                 }
+                             }
+                             a {
+-                                color: $primary;
++                                color: var(--pgn-color-primary-base);
+                                 font-size: 16px;
+                                 font-weight: 600;
+                                 line-height: 20px;
+@@ -344,14 +344,14 @@
+                         margin: 0;
+                         button {
+                             padding: 7px 13px !important;
+-                            border: 1px solid $primary !important;
++                            border: 1px solid var(--pgn-color-primary-base) !important;
+                             color: #fff;
+                             text-decoration: none;
+                             font-size: 14px;
+                             font-weight: 500;
+                             line-height: 20px;
+                             margin: 0 0 0 15px !important;
+-                            background: $primary;
++                            background: var(--pgn-color-primary-base);
+                             &.btn-link {
+                                 background: #fff !important;
+                                 border-color: #D1D5DB !important;
+@@ -368,7 +368,10 @@
+     }
+     .profile-avatar {
+         svg.text-muted {
+-            color: $primary !important;
++            color: var(--pgn-color-primary-base) !important;
+         }
+     }
++    .bg-color-grey-FBFAF9 {
++      background: var(--pgn-color-primary-light);
++    }
+ }
+diff --git a/paragon/_progress.scss b/paragon/_progress.scss
+index a3fd6a1..fd5f28d 100644
+--- a/paragon/_progress.scss
++++ b/paragon/_progress.scss
+@@ -6,14 +6,14 @@
+             font-weight: 800;
+             font-size: 24px;
+             line-height: 30px;
+-            color: $text-color;
++            color: var(--pgn-color-text-base);
+         }
+     }
+     >.row {
+         >.col-12.col-md-8.p-0 {
+             .rounded.raised-card {
+                 border: 1px solid #E5E7EB !important;
+-                border-left: 8px solid $primary-light !important;
++                border-left: 8px solid var(--pgn-color-primary-light) !important;
+                 border-radius: 8px !important;
+                 box-shadow: none !important;
+                 font-size: 16px;
+@@ -36,21 +36,21 @@
+                 }
+                 .bg-warning-100 {
+                     padding: 10px 15px !important;
+-                    background: $primary-light !important;
++                    background: var(--pgn-color-primary-light) !important;
+                     .h4 {
+                         font-size: 14px;
+-                        color: $primary;
++                        color: var(--pgn-color-primary-base);
+                         font-weight: 600;
+                     }
+                     svg {
+-                        color: $primary;
++                        color: var(--pgn-color-primary-base);
+                     }
+                 }
+             }
+         }
+         >.col-12.col-md-4.p-0.px-md-4, >.col-12.col-md-8.p-0 {
+             .bg-light-200.raised-card {
+-                background: $primary-light !important;
++                background: var(--pgn-color-primary-light) !important;
+                 box-shadow: none !important;
+                 .pgn__card-header {
+                     .pgn__card-header-content {
+@@ -68,51 +68,51 @@
+                 }
+                 .btn.btn-outline-brand {
+                     padding: 7px 13px !important;
+-                    border: 1px solid #15376D !important;
++                    border: 1px solid #DC2626 !important;
+                     color: #fff;
+                     text-decoration: none;
+                     font-size: 14px;
+                     font-weight: 500;
+                     line-height: 20px;
+                     margin: 0 !important;
+-                    background: #15376D;
++                    background: #DC2626;
+                 }
+             } 
+             section.mb-4.x-small {
+-                background-color: $primary-light;
++                background-color: var(--pgn-color-primary-light);
+                 font-size: 16px !important;
+                 border-radius: 8px;
+                 padding: 20px;
+                 ul {
+                     list-style: none;
+                     a {
+-                        color: $primary;
++                        color: var(--pgn-color-primary-base);
+                     }
+                 }
+             }
+         }
+     }
+     .donut-ring.complete-stroke, .donut-segment.complete-stroke, .donut-hole.complete-stroke {
+-        stroke: $primary;
++        stroke: var(--pgn-color-primary-base);
+     }
+     .donut-ring.incomplete-stroke, .donut-segment.incomplete-stroke, .donut-hole.incomplete-stroke {
+-        stroke: $primary-light;
++        stroke: var(--pgn-color-primary-light);
+     }
+     svg.donut {
+-        @include media-breakpoint-up(sm) {
++        @media (--pgn-size-breakpoint-min-width-sm) {
+             float: right;
+         }
+     }   
+     .donut-chart-text {
+         .donut-chart-number {
+-            color: $text-color;
++            color: var(--pgn-color-text-base);
+         }
+         .donut-chart-label {
+             color: #4B5563;
+         }
+     }
+     .grade-bar .grade-bar__base {
+-        fill: $primary-light;
++        fill: var(--pgn-color-primary-light);
+     }
+ }
+ #root {
+@@ -134,7 +134,7 @@
+         }
+         .pgn__data-table-wrapper {
+             border: 1px solid #E5E7EB !important;
+-            border-left: 8px solid $primary-light !important;
++            border-left: 8px solid var(--pgn-color-primary-light) !important;
+             border-radius: 8px !important;
+             box-shadow: none !important;
+             .border-primary {
+@@ -144,7 +144,7 @@
+                 font-size: 14px !important;
+             }
+             #weighted-grade-summary.small {
+-                color: $primary !important;
++                color: var(--pgn-color-primary-base) !important;
+                 font-weight: 600 !important;
+                 font-size: 14px !important;
+             }
+@@ -152,15 +152,15 @@
+     }
+ }
+ #non-passing-grade-tooltip {
+-    background: $primary;
+-    border-color: $primary;
++    background: var(--pgn-color-primary-base);
++    border-color: var(--pgn-color-primary-base);
+     filter: none;
+     .arrow {
+         &:before {
+-            border-top-color: $primary !important;
++            border-top-color: var(--pgn-color-primary-base) !important;
+         }
+         &:after {
+-            border-top-color: $primary !important;
++            border-top-color: var(--pgn-color-primary-base) !important;
+         }
+     }
+     .popover-body {
+diff --git a/paragon/_tour.scss b/paragon/_tour.scss
+index 5ae642b..30c9e67 100644
+--- a/paragon/_tour.scss
++++ b/paragon/_tour.scss
+@@ -2,7 +2,7 @@
+ 
+ #paragon-portal-root .new-user-tour-dialog {
+     .pgn__modal-hero {
+-        background: $primary-light;
++        background: var(--pgn-color-primary-light);
+         min-height: 50px;
+         .pgn__modal-hero-bg {
+             display: none;
+@@ -11,12 +11,12 @@
+             max-width: 100% !important;
+         }
+         h2.pgn__modal-title {
+-            color: $primary !important;
++            color: var(--pgn-color-primary-base) !important;
+             font-size: 27px;
+             line-height: 30px;
+             margin: 0;
+             .text-accent-b {
+-                color: $primary !important;
++                color: var(--pgn-color-primary-base) !important;
+             }
+         }
+     }
+@@ -25,7 +25,7 @@
+             display: none;
+         }
+         p {
+-            color: $text-color-primary !important;
++            color: var(--pgn-color-text-primary) !important;
+             font-size: 14px;
+             line-height: 20px;
+             text-align: center;
+@@ -42,30 +42,29 @@
+             border: 1px solid #D1D5DB;
+             margin: 0 10px;
+             &.btn-brand {
+-                background: $primary !important;
+-                border-color: $primary !important;
++                background: var(--pgn-color-primary-base) !important;
++                border-color: var(--pgn-color-primary-base) !important;
+             }
+         }
+     }
+ }
+ #pgn__checkpoint {
+-    background: $primary-light;
+-    border-top: 8px solid $primary;
++    background: var(--pgn-color-primary-light);
++    border-top: 8px solid var(--pgn-color-primary-base);
+     #pgn__checkpoint-title {
+         font-size: 22px;
+         line-height: 30px;
+-        color: #111827;
+     }
+ }
+ #pgn__checkpoint[data-popper-placement^=bottom] > #pgn__checkpoint-arrow:after {
+-    border-bottom: solid 15px $primary;
++    border-bottom: solid 15px var(--pgn-color-primary-base);
+ }
+ #pgn__checkpoint[data-popper-placement^=top] > #pgn__checkpoint-arrow:after {
+-    border-top: solid 15px $primary-light;
++    border-top: solid 15px var(--pgn-color-primary-light);
+ }
+ .pgn__checkpoint[data-popper-placement^=left] > #pgn__checkpoint-arrow::after {
+-    border-left: solid 15px $primary-light;
++    border-left: solid 15px var(--pgn-color-primary-light);
+ }
+ .pgn__checkpoint[data-popper-placement^=right] > #pgn__checkpoint-arrow::after {
+-    border-right: solid 15px $primary-light;
+-}
+\ No newline at end of file
++    border-right: solid 15px var(--pgn-color-primary-light);
++}
+diff --git a/paragon/_variables.scss b/paragon/_variables.scss
+index dcd6bf8..c0873cb 100644
+--- a/paragon/_variables.scss
++++ b/paragon/_variables.scss
+@@ -1,11 +1,2 @@
+-$primary: #15376D;
+-$primary-light: #F2F7F8;
+-$light-dark: #374151;
+-$text-color: #111827;
+-$text-color-primary: #515661;
+-$text-color-light: #515661;
+-
+ // for toggle theme button
+ $page-color-transition: transparent .2s ease, color .2s ease;
+-
+-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+diff --git a/paragon/build/core/index.css b/paragon/build/core/index.css
+new file mode 100644
+index 0000000..8b13789
+--- /dev/null
++++ b/paragon/build/core/index.css
+@@ -0,0 +1 @@
++
+diff --git a/paragon/build/themes/dark/index.css b/paragon/build/themes/dark/index.css
+new file mode 100644
+index 0000000..dca6ff2
+--- /dev/null
++++ b/paragon/build/themes/dark/index.css
+@@ -0,0 +1,2 @@
++@import "overrides/component-button-variants.css";
++@import "variables.css";
+diff --git a/paragon/build/themes/dark/overrides/component-button-variants.css b/paragon/build/themes/dark/overrides/component-button-variants.css
+new file mode 100644
+index 0000000..1224375
+--- /dev/null
++++ b/paragon/build/themes/dark/overrides/component-button-variants.css
+@@ -0,0 +1,26 @@
++/**
++ * Do not edit directly, this file was auto-generated.
++ */
++
++/* Alert actions */
++
++.pgn__alert-message-wrapper .pgn__alert-actions .btn-primary,
++.pgn__alert-message-wrapper-stacked .pgn__alert-actions .btn-primary {
++  --pgn-btn-color: var(--pgn-color-btn-text-brand);
++  --pgn-btn-bg: var(--pgn-color-btn-bg-brand);
++  --pgn-btn-border-color: var(--pgn-color-btn-border-brand);
++  --pgn-btn-hover-color: var(--pgn-color-btn-hover-text-brand);
++  --pgn-btn-hover-bg: var(--pgn-color-btn-hover-bg-brand);
++  --pgn-btn-hover-border-color: var(--pgn-color-btn-hover-border-brand);
++  --pgn-btn-disabled-color: var(--pgn-color-btn-disabled-text-brand);
++  --pgn-btn-disabled-bg: var(--pgn-color-btn-disabled-bg-brand);
++  --pgn-btn-disabled-border-color: var(--pgn-color-btn-disabled-border-brand);
++  --pgn-btn-active-color: var(--pgn-color-btn-active-text-brand);
++  --pgn-btn-active-bg: var(--pgn-color-btn-active-bg-brand);
++  --pgn-btn-active-border-color: var(--pgn-color-btn-active-border-brand);
++  --pgn-btn-focus-outline-color: var(--pgn-color-btn-focus-outline-brand);
++  --pgn-btn-focus-color: var(--pgn-color-btn-focus-text-brand);
++  --pgn-btn-focus-border-color: var(--pgn-color-btn-focus-border-brand);
++  --pgn-btn-focus-bg: var(--pgn-color-btn-focus-bg-brand);
++}
++
+diff --git a/paragon/build/themes/dark/variables.css b/paragon/build/themes/dark/variables.css
+new file mode 100644
+index 0000000..35be429
+--- /dev/null
++++ b/paragon/build/themes/dark/variables.css
+@@ -0,0 +1,66 @@
++/**
++ * Do not edit directly, this file was auto-generated.
++ * See <PARAGON_ROOT>/tokens/README.md for more details.
++ */
++
++:root {
++  --pgn-color-light-base: #DDDFE2FF; /** Basic light color, dark theme. */
++  --pgn-color-primary-100: #8E9FBFFF; /** Primary color of level 100. */
++  --pgn-color-primary-500: #747E92FF; /** Primary color of level 500. */
++  --pgn-color-primary-base: #AEC7F6FF; /** Basic primary color, dark theme. */
++  --pgn-color-primary-light: #292A2CFF; /** Light primary color, dark theme. */
++  --pgn-color-primary-border: #777792FF; /** Primary border color, dark theme. */
++  --pgn-color-brand-base: #CE80AAFF; /** Basic brand color, dark theme. */
++  --pgn-color-text-base: #F8F8F8FF; /** Text base color, dark theme. */
++  --pgn-color-text-primary: #DDDFE2FF; /** Text primary color, dark theme. */
++  --pgn-color-text-button: #112F6BFF; /** Button text color, dark theme. */
++  --pgn-color-bg-light-overlay: #36383BFF; /** Light background overlay color, dark theme. */
++  --pgn-color-bg-hover: #383938FF; /** Background hover color, dark theme. */
++  --pgn-color-body-bg: #0D0D0EFF; /** Body background color, dark theme. */
++  --pgn-color-header-bg: #0D0D0EFF; /** Header background color, dark theme. */
++  --pgn-color-success-500: #3A8E41FF; /** Success color of level 500. */
++  --pgn-color-success-base: #54CF5EFF; /** Basic success color, dark theme. */
++  --pgn-color-danger-base: #FFA07AFF; /** Basic danger color, dark theme. */
++  --pgn-course-card-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0px 4px 6px -2px rgba(255, 255, 255, 0.15), 0px 10px 15px -3px rgba(255, 255, 255, 0.15);
++  --pgn-elevation-box-shadow-level-1: rgba(255, 255, 255, 0.15);
++  --pgn-elevation-box-shadow-level-2: rgba(255, 255, 255, 0.15);
++  --pgn-elevation-box-shadow-level-3: rgba(255, 255, 255, 0.15);
++  --pgn-elevation-box-shadow-level-4: rgba(255, 255, 255, 0.15);
++  --pgn-color-text-footer: var(--pgn-color-text-primary); /** Footer text color, dark theme. */
++  --pgn-color-bg-info: var(--pgn-color-primary-light);
++  --pgn-color-body-base: var(--pgn-color-text-base); /** Light text color, dark theme. */
++  --pgn-color-accent-a: var(--pgn-color-primary-base); /** Accent color, dark theme. */
++  --pgn-color-white: var(--pgn-color-body-bg); /** Header background color Profile page. */
++  --pgn-color-btn-border-inverse-outline-primary: var(--pgn-color-primary-base);
++  --pgn-color-btn-border-outline-primary: var(--pgn-color-primary-base);
++  --pgn-color-btn-text-primary: var(--pgn-color-primary-light);
++  --pgn-color-btn-text-outline-primary: var(--pgn-color-primary-base);
++  --pgn-color-btn-text-inverse-outline-primary: var(--pgn-color-primary-base);
++  --pgn-color-btn-bg-primary: var(--pgn-color-primary-base);
++  --pgn-color-btn-bg-brand: var(--pgn-color-brand-base);
++  --pgn-color-btn-hover-text-primary: var(--pgn-color-text-primary);
++  --pgn-color-btn-hover-text-inverse-outline-primary: var(--pgn-color-text-button);
++  --pgn-color-btn-hover-bg-inverse-outline-primary: var(--pgn-color-light-base);
++  --pgn-color-btn-hover-bg-primary: var(--pgn-color-primary-base);
++  --pgn-color-btn-hover-border-outline-primary: var(--pgn-color-primary-border);
++  --pgn-color-btn-hover-border-primary: var(--pgn-color-primary-base);
++  --pgn-color-chip-border-base: var(--pgn-color-light-base);
++  --pgn-color-dropdown-border: var(--pgn-color-text-base);
++  --pgn-color-dropdown-bg: var(--pgn-color-body-bg);
++  --pgn-color-dropdown-link-active-base: var(--pgn-color-text-base);
++  --pgn-color-dropdown-link-active-bg: var(--pgn-color-primary-base);
++  --pgn-color-dropdown-link-hover-base: var(--pgn-color-body-bg);
++  --pgn-color-form-input-border: var(--pgn-color-primary-base);
++  --pgn-color-form-input-hover-border: var(--pgn-color-primary-base);
++  --pgn-other-content-form-control-checkbox-indicator-icon-checked-base: url("data:image/svg+xml,<svg width='24' height='24' fill='%23AEC7F6FF' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z'/></svg>");
++  --pgn-other-content-form-control-radio-indicator-icon-checked-base: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23AEC7F6FF' viewBox='-4 -4 8 8'%3e%3ccircle r='3' /%3e%3c/svg%3e");
++  --pgn-elevation-box-shadow-base: var(--pgn-elevation-box-shadow-level-2);
++  --pgn-elevation-box-shadow-sm: var(--pgn-elevation-box-shadow-level-1);
++  --pgn-elevation-box-shadow-down-1: var(--pgn-elevation-box-shadow-level-1);
++  --pgn-elevation-box-shadow-lg: var(--pgn-elevation-box-shadow-level-3);
++  --pgn-color-dropdown-link-base: var(--pgn-color-body-base);
++  --pgn-color-dropdown-link-hover-bg: var(--pgn-color-body-base);
++  --pgn-color-form-input-base: var(--pgn-color-body-base);
++  --pgn-color-form-input-bg-base: var(--pgn-color-white);
++  --pgn-color-form-input-focus-bg: var(--pgn-color-white);
++}
+diff --git a/paragon/build/themes/light/index.css b/paragon/build/themes/light/index.css
+new file mode 100644
+index 0000000..2c8a9d3
+--- /dev/null
++++ b/paragon/build/themes/light/index.css
+@@ -0,0 +1 @@
++@import "variables.css";
+diff --git a/paragon/build/themes/light/variables.css b/paragon/build/themes/light/variables.css
+new file mode 100644
+index 0000000..0a4825b
+--- /dev/null
++++ b/paragon/build/themes/light/variables.css
+@@ -0,0 +1,15 @@
++/**
++ * Do not edit directly, this file was auto-generated.
++ * See <PARAGON_ROOT>/tokens/README.md for more details.
++ */
++
++:root {
++  --pgn-color-primary-base: #DC2626FF; /** Basic primary color. */
++  --pgn-color-primary-light: #F2F7F8FF; /** Light primary color. */
++  --pgn-color-text-base: #111827FF; /** Text base color. */
++  --pgn-color-text-light: #515661FF; /** Text light color. */
++  --pgn-color-text-footer: #374151FF; /** Footer text color. */
++  --pgn-color-text-primary: #515661FF; /** Text primary color. */
++  --pgn-course-card-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 4px 6px -2px rgba(0, 0, 0, 0.15), 0px 10px 15px -3px rgba(0, 0, 0, 0.15);
++  --pgn-color-primary-100: #FDF2F2FF; /** Primary color of level 100. */
++}
+diff --git a/paragon/core.scss b/paragon/core.scss
+new file mode 100644
+index 0000000..65330e7
+--- /dev/null
++++ b/paragon/core.scss
+@@ -0,0 +1,13 @@
++// this file creates the core.css import here all the common styles for your theme.
++
++// For --pgn-elevation-box-shadow-level-1, etc
++@use "~@openedx/paragon/styles/css/themes/light/abstraction-variables.css";
++
++// Imports custom-media-breakpoints.css
++@import './build/core/index.css';
++
++@import "~@openedx/paragon/dist/Button/mixins";
++
++@import "./variables";
++@import "./fonts";
++@import "./overrides";
+diff --git a/paragon/tokens/.gitkeep b/paragon/tokens/.gitkeep
+new file mode 100644
+index 0000000..e69de29
+diff --git a/paragon/tokens/src/themes/dark/color.json b/paragon/tokens/src/themes/dark/color.json
+new file mode 100644
+index 0000000..d5d1868
+--- /dev/null
++++ b/paragon/tokens/src/themes/dark/color.json
+@@ -0,0 +1,195 @@
++{
++  "$type": "color",
++  "color": {
++    "light": {
++      "base": {
++        "$value": "#DDDFE2",
++        "source": "$primary",
++        "actions": {
++          "default": "{color.light.base}"
++        },
++        "$description": "Basic light color, dark theme."
++      }
++    },
++    "primary": {
++      "100": {
++        "source": "$primary-100",
++        "actions": {
++          "default": "{color.primary.100}"
++        },
++        "$value": "#8e9fbf",
++        "$description": "Primary color of level 100."
++      },
++      "500": {
++        "source": "$primary-500",
++        "actions": {
++          "default": "{color.primary.500}"
++        },
++        "$value": "#747e92",
++        "$description": "Primary color of level 500."
++      },
++      "base": {
++        "$value": "#AEC7F6",
++        "source": "$primary",
++        "actions": {
++          "default": "{color.primary.base}"
++        },
++        "$description": "Basic primary color, dark theme."
++      },
++      "light": {
++        "$value": "#292A2C",
++        "source": "$primary-light",
++        "actions": {
++          "default": "{color.primary.light}"
++        },
++        "$description": "Light primary color, dark theme."
++      },
++      "border": {
++        "$value": "#777792",
++        "source": "$primary-border",
++        "actions": {
++          "default": "{color.primary.border}"
++        },
++        "$description": "Primary border color, dark theme."
++      }
++    },
++    "brand": {
++      "base": {
++        "$value": "#CE80AA",
++        "source": "$brand",
++        "actions": {
++          "default": "{color.brand.base}"
++        },
++        "$description": "Basic brand color, dark theme."
++      }
++    },
++    "text": {
++      "base": {
++        "$value": "#F8F8F8",
++        "source": "$text-color",
++        "actions": {
++          "default": "{color.text.base}"
++        },
++        "$description": "Text base color, dark theme."
++      },
++      "footer": {
++        "$value": "{color.text.primary}",
++        "source": "$footer-color",
++        "actions": {
++          "default": "{color.text.footer}"
++        },
++        "$description": "Footer text color, dark theme."
++      },
++      "primary": {
++        "$value": "#DDDFE2",
++        "source": "$text-primary",
++        "actions": {
++          "default": "{color.text.primary}"
++        },
++        "$description": "Text primary color, dark theme."
++      },
++      "button": {
++        "$value": "#112F6B",
++        "source": "$btn-color",
++        "actions": {
++          "default": "{color.text.button}"
++        },
++        "$description": "Button text color, dark theme."
++      }
++    },
++    "bg": {
++      "info": {
++        "$value": "{color.primary.light}",
++        "$type": "color",
++        "source": "$btn-info-hover-bg"
++      },
++      "light-overlay": {
++        "$value": "#36383B",
++        "source": "$bg-light-overlay",
++        "actions": {
++          "default": "{color.bg.light-overlay}"
++        },
++        "$description": "Light background overlay color, dark theme."
++      },
++      "hover": {
++        "$value": "#383938",
++        "source": "$bg-hover",
++        "actions": {
++          "default": "{color.bg.hover}"
++        },
++        "$description": "Background hover color, dark theme."
++      }
++    },
++    "body": {
++      "bg": {
++        "$value": "#0D0D0E",
++        "source": "$body-bg",
++        "actions": {
++          "default": "{color.body.bg}"
++        },
++        "$description": "Body background color, dark theme."
++      },
++      "base": {
++        "$value": "{color.text.base}",
++        "source": "$body-text",
++        "$description": "Light text color, dark theme."
++      }
++    },
++    "header": {
++      "bg": {
++        "$value": "#0D0D0E",
++        "source": "$body-bg",
++        "actions": {
++          "default": "{color.body.bg}"
++        },
++        "$description": "Header background color, dark theme."
++      }
++    },
++    "accent": {
++      "a": {
++        "$value": "{color.primary.base}",
++        "source": "$body-bg",
++        "actions": {
++          "default": "{color.body.bg}"
++        },
++        "$description": "Accent color, dark theme."
++      }
++    },
++    "success": {
++      "500": {
++        "source": "$success-500",
++        "actions": {
++          "default": "{color.success.500}"
++        },
++        "$value": "#3a8e41",
++        "$description": "Success color of level 500."
++      },
++      "base": {
++        "$value": "#54CF5E",
++        "source": "$success",
++        "actions": {
++          "default": "{color.success.base}"
++        },
++        "$description": "Basic success color, dark theme."
++      }
++    },
++    "danger": {
++      "base": {
++        "$value": "#FFA07A",
++        "source": "$danger",
++        "actions": {
++          "default": "{color.danger.base}"
++        },
++        "$description": "Basic danger color, dark theme."
++      }
++    },
++    "white": {
++      "$value": "{color.body.bg}",
++      "source": "$light-100",
++      "actions": {
++        "default": "{color.body.bg}"
++      },
++      "$description": "Header background color Profile page."
++    }
++  }
++}
+diff --git a/paragon/tokens/src/themes/dark/components/Alert.json b/paragon/tokens/src/themes/dark/components/Alert.json
+new file mode 100644
+index 0000000..df7e216
+--- /dev/null
++++ b/paragon/tokens/src/themes/dark/components/Alert.json
+@@ -0,0 +1,22 @@
++{
++  "color": {
++    "alert": {
++      "bg": {
++        "info": {
++          "value": "{color.bg.hover}",
++          "$type": "color",
++          "source": "$alert-info-bg"
++        }
++      },
++      "actions": {
++        "overrides": {
++          "button": {
++            "variants": {
++              "primary": "brand"
++            }
++          }
++        }
++      }
++    }
++  }
++}
+diff --git a/paragon/tokens/src/themes/dark/components/Button/color.json b/paragon/tokens/src/themes/dark/components/Button/color.json
+new file mode 100644
+index 0000000..f68bd80
+--- /dev/null
++++ b/paragon/tokens/src/themes/dark/components/Button/color.json
+@@ -0,0 +1,103 @@
++{
++  "color": {
++    "btn": {
++      "border": {
++        "inverse": {
++          "outline-primary": {
++            "$value": "{color.primary.base}",
++            "$type": "color",
++            "source": "$btn-primary-inverse-outline-border-color"
++          }
++        },
++        "outline-primary": {
++          "$value": "{color.primary.base}",
++          "$type": "color",
++          "source": "$btn-primary-outline-border-color"
++        }
++      },
++      "text": {
++        "primary": {
++          "$value": "{color.primary.light}",
++          "$type": "color",
++          "source": "$btn-primary-text-color"
++        },
++        "outline-primary": {
++          "$value": "{color.primary.base}",
++          "$type": "color",
++          "source": "$btn-primary-outline-text-color"
++        },
++        "inverse": {
++          "outline-primary": {
++            "$value": "{color.primary.base}",
++            "$type": "color",
++            "source": "$btn-primary-inverse-outline-text-color"
++          }
++        }
++      },
++      "bg": {
++        "primary": {
++          "$value": "{color.primary.base}",
++          "$type": "color",
++          "source": "$btn-primary-bg"
++        },
++        "brand": {
++          "$value": "{color.brand.base}",
++          "$type": "color",
++          "source": "$btn-brand-bg"
++        }
++      },
++      "hover": {
++        "text": {
++          "primary": {
++            "$value": "{color.text.primary}",
++            "$type": "color",
++            "source": "$btn-primary-hover-color",
++            "modify": null
++          },
++          "inverse": {
++            "outline-primary": {
++              "$value": "{color.text.button}",
++              "$type": "color",
++              "source": "$btn-primary-inverse-outline-text-color"
++            }
++          }
++        },
++        "bg": {
++          "inverse": {
++            "outline-primary": {
++              "$value": "{color.light.base}",
++              "$type": "color",
++              "source": "$btn-primary-inverse-outline-bg-color"
++            }
++          },
++          "primary": {
++            "$value": "{color.primary.base}",
++            "$type": "color",
++            "source": "$btn-primary-hover-bg"
++          }
++        },
++        "border": {
++          "outline-primary": {
++            "$value": "{color.primary.border}",
++            "$type": "color",
++            "source": "$btn-primary-outline-border-color"
++          },
++          "primary": {
++            "$value": "{color.primary.base}",
++            "$type": "color",
++            "source": "$btn-primary-hover-border-color"
++          }
++        }
++      }
++    }
++  },
++  "course": {
++    "card": {
++      "shadow": {
++        "$value": "0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0px 4px 6px -2px rgba(255, 255, 255, 0.15), 0px 10px 15px -3px rgba(255, 255, 255, 0.15)",
++        "$type": "shadow",
++        "source": "$course-card-shadow"
++      }
++    }
++  }
++}
+diff --git a/paragon/tokens/src/themes/dark/components/Chip.json b/paragon/tokens/src/themes/dark/components/Chip.json
+new file mode 100644
+index 0000000..cccd6fb
+--- /dev/null
++++ b/paragon/tokens/src/themes/dark/components/Chip.json
+@@ -0,0 +1,11 @@
++{
++  "color": {
++    "chip": {
++      "border": {
++        "base": {
++          "$value": "{color.light.base}"
++        }
++      }
++    }
++  }
++}
+diff --git a/paragon/tokens/src/themes/dark/components/Dropdown.json b/paragon/tokens/src/themes/dark/components/Dropdown.json
+new file mode 100644
+index 0000000..1b97b29
+--- /dev/null
++++ b/paragon/tokens/src/themes/dark/components/Dropdown.json
+@@ -0,0 +1,33 @@
++{
++  "color": {
++    "dropdown": {
++      "border": {
++        "$value": "{color.text.base}"
++      },
++      "bg": {
++        "$value": "{color.body.bg}"
++      },
++      "link": {
++        "base": {
++          "$value": "{color.body.base}"
++        },
++        "active": {
++          "base": {
++            "$value": "{color.text.base}"
++          },
++          "bg": {
++            "$value": "{color.primary.base}"
++          }
++        },
++        "hover": {
++          "base": {
++            "$value": "{color.body.bg}"
++          },
++          "bg": {
++            "$value": "{color.body.base}"
++          }
++        }
++      }
++    }
++  }
++}
+diff --git a/paragon/tokens/src/themes/dark/components/Form/checkbox.json b/paragon/tokens/src/themes/dark/components/Form/checkbox.json
+new file mode 100644
+index 0000000..786baec
+--- /dev/null
++++ b/paragon/tokens/src/themes/dark/components/Form/checkbox.json
+@@ -0,0 +1,23 @@
++{
++  "other": {
++    "content": {
++      "form": {
++        "control": {
++          "checkbox": {
++            "indicator": {
++              "icon": {
++                "checked": {
++                  "base": {
++                    "$value": "url(\"data:image/svg+xml,<svg width='24' height='24' fill='{color.primary.base}' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z'/></svg>\")",
++                    "outputReferences": false,
++                    "modify": [{ "type": "str-replace", "toReplace": "#", "replaceWith": "%23" }]
++                  }
++                }
++              }
++            }
++          }
++        }
++      }
++    }
++  }
++}
+diff --git a/paragon/tokens/src/themes/dark/components/Form/color.json b/paragon/tokens/src/themes/dark/components/Form/color.json
+new file mode 100644
+index 0000000..5976358
+--- /dev/null
++++ b/paragon/tokens/src/themes/dark/components/Form/color.json
+@@ -0,0 +1,29 @@
++{
++  "color": {
++    "form": {
++      "input": {
++        "base": {
++          "$value": "{color.body.base}"
++        },
++        "bg": {
++          "base": {
++            "$value": "{color.white}"
++          }
++        },
++        "border": {
++          "$value": "{color.primary.base}"
++        },
++        "hover": {
++          "border": {
++            "$value": "{color.primary.base}"
++          }
++        },
++        "focus": {
++          "bg": {
++            "$value": "{color.white}"
++          }
++        }
++      }
++    }
++  }
++}
+diff --git a/paragon/tokens/src/themes/dark/components/Form/radio.json b/paragon/tokens/src/themes/dark/components/Form/radio.json
+new file mode 100644
+index 0000000..421091c
+--- /dev/null
++++ b/paragon/tokens/src/themes/dark/components/Form/radio.json
+@@ -0,0 +1,23 @@
++{
++  "other": {
++    "content": {
++      "form": {
++        "control": {
++          "radio": {
++            "indicator": {
++              "icon": {
++                "checked": {
++                  "base": {
++                    "$value": "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='{color.primary.base}' viewBox='-4 -4 8 8'%3e%3ccircle r='3' /%3e%3c/svg%3e\")",
++                    "outputReferences": false,
++                    "modify": [{ "type": "str-replace", "toReplace": "#", "replaceWith": "%23" }]
++                  }
++                }
++              }
++            }
++          }
++        }
++      }
++    }
++  }
++}
+diff --git a/paragon/tokens/src/themes/dark/elevation.json b/paragon/tokens/src/themes/dark/elevation.json
+new file mode 100644
+index 0000000..e9f4fdb
+--- /dev/null
++++ b/paragon/tokens/src/themes/dark/elevation.json
+@@ -0,0 +1,20 @@
++{
++  "elevation": {
++    "box-shadow": {
++      "level": {
++        "1": { "$value": "0px 2px 8px 0px rgba(255,255,255,0.15), 0px 2px 4px 0px rgba(255,255,255,0.15)" },
++        "2": { "$value": "0px 4px 10px 0px rgba(255,255,255,0.15), 0px 8px 16px 0px rgba(255,255,255,0.15)" },
++        "3": { "$value": "0px 8px 20px 0px rgba(255,255,255,0.15), 0px 10px 20px 0px rgba(255,255,255,0.15)" },
++        "4": { "$value": "0px 8px 48px 0px rgba(255,255,255,0.15), 0px 20px 40px 0px rgba(255,255,255,0.15)" }
++      },
++      "base": { "$value": "{elevation.box-shadow.level.2}" },
++      "sm": { "$value": "{elevation.box-shadow.level.1}" },
++      "down": {
++        "1": {
++          "$value": "{elevation.box-shadow.level.1}"
++        }
++      },
++      "lg": { "$value": "{elevation.box-shadow.level.3}" }
++    }
++  }
++}
+diff --git a/paragon/tokens/src/themes/light/color.json b/paragon/tokens/src/themes/light/color.json
+new file mode 100644
+index 0000000..eb40fcc
+--- /dev/null
++++ b/paragon/tokens/src/themes/light/color.json
+@@ -0,0 +1,63 @@
++{
++  "$type": "color",
++  "color": {
++    "primary": {
++      "100": {
++        "source": "$primary-100",
++        "modify": [
++          {
++            "type": "mix",
++            "otherColor": "white",
++            "amount": "0.94"
++          }
++        ],
++        "actions": {
++          "default": "{color.primary.100}"
++        },
++        "$value": "{color.primary.base}",
++        "$description": "Primary color of level 100."
++      },
++      "base": {
++        "$value": "#DC2626",
++        "source": "$primary",
++        "$description": "Basic primary color."
++      },
++      "light": {
++        "$value": "#F2F7F8",
++        "source": "$primary-light",
++        "$description": "Light primary color."
++      }
++    },
++    "text": {
++      "base": {
++        "$value": "#111827",
++        "source": "$text-color",
++        "$description": "Text base color."
++      },
++      "light": {
++        "$value": "#515661",
++        "source": "$text-color-light",
++        "$description": "Text light color."
++      },
++      "footer": {
++        "$value": "#374151",
++        "source": "$light-dark",
++        "$description": "Footer text color."
++      },
++      "primary": {
++        "$value": "#515661",
++        "source": "$text-color-primary",
++        "$description": "Text primary color."
++      }
++    }
++  },
++  "course": {
++    "card": {
++      "shadow": {
++        "$value": "0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 4px 6px -2px rgba(0, 0, 0, 0.15), 0px 10px 15px -3px rgba(0, 0, 0, 0.15)",
++        "$type": "shadow",
++        "source": "$course-card-shadow"
++      }
++    }
++  }
++}

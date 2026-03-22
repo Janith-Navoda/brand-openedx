@@ -99,7 +99,7 @@
         stroke: var(--pgn-color-primary-light);
     }
     svg.donut {
-        @media (--pgn-size-breakpoint-min-width-sm) {
+        @media (min-width: 576px) {
             float: right;
         }
     }   

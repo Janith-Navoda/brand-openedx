@@ -9,7 +9,7 @@
         border: none !important;
         font-size: 18px;
         line-height: 24px;
-        @media (--pgn-size-breakpoint-min-width-md) {
+        @media (min-width: 768px) {
             font-size: 18px;
             line-height: 30px;
             padding: 14px 24px;
@@ -17,7 +17,7 @@
         .fa-check-circle {
             width: 20px;
             height: 20px;
-            @media (--pgn-size-breakpoint-min-width-md) {
+            @media (min-width: 768px) {
                 width: 24px;
                 height: 24px;
             }
@@ -42,7 +42,7 @@
     .collapsible-body {
         padding: 0 0 0 56px;
         border: none;
-        @media (--pgn-size-breakpoint-min-width-md) {
+        @media (min-width: 768px) {
             padding: 0 0 0 91px;
         }
         .text-success {
@@ -52,14 +52,14 @@
             padding: 0 0 15px;
             li {
                 div {
-                    @media (--pgn-size-breakpoint-max-width-md) {
+                    @media (max-width: 767.98px) {
                         line-height: 18px;
                     }
                 }
                 a {
                     color: var(--pgn-color-text-base);
                     font-size: 15px;
-                    @media (--pgn-size-breakpoint-min-width-md) {
+                    @media (min-width: 768px) {
                         font-size: 18px;
                     }
                 }
@@ -106,7 +106,7 @@
                 }
             }
             .pgn__card-header-actions {
-                @media (--pgn-size-breakpoint-max-width-md) {
+                @media (max-width: 767.98px) {
                     margin-left: 0;
                 }
                 a {
@@ -116,14 +116,14 @@
                     line-height: 24px;
                     border-radius: 6px;
                     border: none;
-                    @media (--pgn-size-breakpoint-max-width-md) {
+                    @media (max-width: 767.98px) {
                         width: 100%;
                     }
                 }
             }
             .pgn__card-header {
                 display: block;
-                @media (--pgn-size-breakpoint-min-width-md) {
+                @media (min-width: 768px) {
                     display: flex;
                 }
             }
@@ -158,7 +158,7 @@
             font-weight: 500;
             margin: 0 10px 0 0;
             background: none !important;
-            @media (--pgn-size-breakpoint-min-width-md) {
+            @media (min-width: 768px) {
                 margin: 0 32px 0 0;
             }
         }
@@ -171,7 +171,7 @@ div[data-learner-type=b2c_learner] {
         margin: 0 0 20px;
         color: var(--pgn-color-text-base);
         font-weight: 800;
-        @media (--pgn-size-breakpoint-min-width-md) {
+        @media (min-width: 768px) {
             font-size: 36px;
             line-height: 44px;
         }
@@ -179,12 +179,12 @@ div[data-learner-type=b2c_learner] {
 }
 .course-outline-tab {
     padding-bottom: 30px;
-    @media (--pgn-size-breakpoint-min-width-md) {
+    @media (min-width: 768px) {
         padding-bottom: 50px;
     }
     section.mb-4 {
         border-radius: 8px;
-        @media (--pgn-size-breakpoint-min-width-md) {
+        @media (min-width: 768px) {
             padding: 0 0 0 25px;
         }
         h2 {
