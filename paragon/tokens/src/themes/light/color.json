@@ -12,7 +12,7 @@
           }
         ],
         "actions": {
-          "default": "{color.action.default.primary.100}"
+          "default": "{color.primary.100}"
         },
         "$value": "{color.primary.base}",
         "$description": "Primary color of level 100."
