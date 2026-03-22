@@ -4,6 +4,10 @@
  */
 
 :root {
+  --pgn-elevation-box-shadow-level-1: 0px 2px 8px 0px rgba(255,255,255,0.15), 0px 2px 4px 0px rgba(255,255,255,0.15);
+  --pgn-elevation-box-shadow-level-2: 0px 4px 10px 0px rgba(255,255,255,0.15), 0px 8px 16px 0px rgba(255,255,255,0.15);
+  --pgn-elevation-box-shadow-level-3: 0px 8px 20px 0px rgba(255,255,255,0.15), 0px 10px 20px 0px rgba(255,255,255,0.15);
+  --pgn-elevation-box-shadow-level-4: 0px 8px 48px 0px rgba(255,255,255,0.15), 0px 20px 40px 0px rgba(255,255,255,0.15);
   --pgn-color-light-base: #DDDFE2FF; /** Basic light color, dark theme. */
   --pgn-color-primary-100: #8E9FBFFF; /** Primary color of level 100. */
   --pgn-color-primary-500: #747E92FF; /** Primary color of level 500. */
@@ -22,10 +26,12 @@
   --pgn-color-success-base: #54CF5EFF; /** Basic success color, dark theme. */
   --pgn-color-danger-base: #FFA07AFF; /** Basic danger color, dark theme. */
   --pgn-course-card-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0px 4px 6px -2px rgba(255, 255, 255, 0.15), 0px 10px 15px -3px rgba(255, 255, 255, 0.15);
-  --pgn-elevation-box-shadow-level-1: rgba(255, 255, 255, 0.15);
-  --pgn-elevation-box-shadow-level-2: rgba(255, 255, 255, 0.15);
-  --pgn-elevation-box-shadow-level-3: rgba(255, 255, 255, 0.15);
-  --pgn-elevation-box-shadow-level-4: rgba(255, 255, 255, 0.15);
+  --pgn-elevation-box-shadow-base: var(--pgn-elevation-box-shadow-level-2);
+  --pgn-elevation-box-shadow-sm: var(--pgn-elevation-box-shadow-level-1);
+  --pgn-elevation-box-shadow-down-1: var(--pgn-elevation-box-shadow-level-1);
+  --pgn-elevation-box-shadow-lg: var(--pgn-elevation-box-shadow-level-3);
+  --pgn-other-content-form-control-checkbox-indicator-icon-checked-base: url("data:image/svg+xml,<svg width='24' height='24' fill='%23AEC7F6FF' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z'/></svg>");
+  --pgn-other-content-form-control-radio-indicator-icon-checked-base: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23AEC7F6FF' viewBox='-4 -4 8 8'%3e%3ccircle r='3' /%3e%3c/svg%3e");
   --pgn-color-text-footer: var(--pgn-color-text-primary); /** Footer text color, dark theme. */
   --pgn-color-bg-info: var(--pgn-color-primary-light);
   --pgn-color-body-base: var(--pgn-color-text-base); /** Light text color, dark theme. */
@@ -52,12 +58,6 @@
   --pgn-color-dropdown-link-hover-base: var(--pgn-color-body-bg);
   --pgn-color-form-input-border: var(--pgn-color-primary-base);
   --pgn-color-form-input-hover-border: var(--pgn-color-primary-base);
-  --pgn-other-content-form-control-checkbox-indicator-icon-checked-base: url("data:image/svg+xml,<svg width='24' height='24' fill='%23AEC7F6FF' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M21 3H3V21H21V3ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z'/></svg>");
-  --pgn-other-content-form-control-radio-indicator-icon-checked-base: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23AEC7F6FF' viewBox='-4 -4 8 8'%3e%3ccircle r='3' /%3e%3c/svg%3e");
-  --pgn-elevation-box-shadow-base: var(--pgn-elevation-box-shadow-level-2);
-  --pgn-elevation-box-shadow-sm: var(--pgn-elevation-box-shadow-level-1);
-  --pgn-elevation-box-shadow-down-1: var(--pgn-elevation-box-shadow-level-1);
-  --pgn-elevation-box-shadow-lg: var(--pgn-elevation-box-shadow-level-3);
   --pgn-color-dropdown-link-base: var(--pgn-color-body-base);
   --pgn-color-dropdown-link-hover-bg: var(--pgn-color-body-base);
   --pgn-color-form-input-base: var(--pgn-color-body-base);
