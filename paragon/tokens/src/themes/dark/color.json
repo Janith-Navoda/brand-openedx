@@ -17,7 +17,7 @@
         "actions": {
           "default": "{color.primary.100}"
         },
-        "$value": "#8e9fbf",
+        "$value": "#FECACA",
         "$description": "Primary color of level 100."
       },
       "500": {
@@ -25,11 +25,11 @@
         "actions": {
           "default": "{color.primary.500}"
         },
-        "$value": "#747e92",
+        "$value": "#F87171",
         "$description": "Primary color of level 500."
       },
       "base": {
-        "$value": "#AEC7F6",
+        "$value": "#FCA5A5",
         "source": "$primary",
         "actions": {
           "default": "{color.primary.base}"
@@ -45,7 +45,7 @@
         "$description": "Light primary color, dark theme."
       },
       "border": {
-        "$value": "#777792",
+        "$value": "#F87171",
         "source": "$primary-border",
         "actions": {
           "default": "{color.primary.border}"
@@ -89,7 +89,7 @@
         "$description": "Text primary color, dark theme."
       },
       "button": {
-        "$value": "#112F6B",
+        "$value": "#7F1D1D",
         "source": "$btn-color",
         "actions": {
           "default": "{color.text.button}"
