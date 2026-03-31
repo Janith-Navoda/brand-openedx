@@ -19,6 +19,52 @@ html {
     border-color: transparent !important;
 }
 
+// Button hover/active/focus color overrides
+// Paragon compiles these from the old primary color at build time,
+// so they must be overridden in CSS to match our #DC2626 primary.
+.btn-primary,
+.btn-brand {
+    background-color: #DC2626 !important;
+    border-color: #DC2626 !important;
+    &:hover {
+        background-color: #B91C1C !important;
+        border-color: #B91C1C !important;
+    }
+    &:active,
+    &.active {
+        background-color: #991B1B !important;
+        border-color: #991B1B !important;
+    }
+    &:focus,
+    &.focus {
+        background-color: #B91C1C !important;
+        border-color: #B91C1C !important;
+    }
+}
+.btn-outline-primary {
+    color: #DC2626 !important;
+    border-color: #DC2626 !important;
+    &:hover,
+    &:active,
+    &.active,
+    &:focus,
+    &.focus {
+        background-color: #DC2626 !important;
+        border-color: #DC2626 !important;
+        color: #fff !important;
+    }
+}
+.btn-inverse-primary {
+    &:hover,
+    &:active,
+    &.active,
+    &:focus,
+    &.focus {
+        background-color: #B91C1C !important;
+        border-color: #B91C1C !important;
+    }
+}
+
 a.course-card-title {
   color: var(--pgn-color-text-primary) !important;
 }
