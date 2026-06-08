@@ -1,2 +1,39 @@
 // for toggle theme button
 $page-color-transition: transparent .2s ease, color .2s ease;
+
+// =============================================================================
+// Brand Color Palette — Primary: #DC2626 (Red)
+// =============================================================================
+
+// Primary color scale
+$primary:           #DC2626; // 500 – base red
+$primary-100:       #FEF2F2; // lightest tint
+$primary-200:       #FECACA; // very light
+$primary-300:       #FCA5A5; // light
+$primary-400:       #F87171; // medium-light
+$primary-500:       #DC2626; // base (same as $primary)
+$primary-600:       #B91C1C; // medium-dark
+$primary-700:       #991B1B; // dark
+$primary-800:       #7F1D1D; // very dark
+$primary-900:       #450A0A; // darkest shade
+
+// Secondary color scale — neutral slate-gray (pairs well with red)
+$secondary:         #475569; // 500 – base slate
+$secondary-100:     #F1F5F9;
+$secondary-200:     #E2E8F0;
+$secondary-300:     #CBD5E1;
+$secondary-400:     #94A3B8;
+$secondary-500:     #475569;
+$secondary-600:     #334155;
+$secondary-700:     #1E293B;
+$secondary-800:     #0F172A;
+$secondary-900:     #020617;
+
+// Brand accent (used for special highlights — a deeper crimson)
+$brand:             #991B1B;
+
+// Semantic colors
+$success:           #16A34A; // Green
+$info:              #0284C7; // Blue
+$warning:           #D97706; // Amber
+$danger:            #DC2626; // Same as primary (red)
