@@ -23,7 +23,7 @@
         "$description": "Basic primary color."
       },
       "light": {
-        "$value": "#F2F7F8",
+        "$value": "#FADEDE",
         "source": "$primary-light",
         "$description": "Light primary color."
       }
